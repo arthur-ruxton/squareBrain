@@ -7,7 +7,6 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Roboto Mono', monospace;
-    background-image: url('https://i.pinimg.com/originals/d2/d7/d1/d2d7d18d39f2cdecf219f0f3419fdc9d.jpg');
 }
 
 .total-div {
