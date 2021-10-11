@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html>
+      <head>
+          <title>Simple Maze conor</title>
+          <link rel="stylesheet" href="main.css">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&display=swap" rel="stylesheet"> 
+      </head>
+      <body>
+          <div class="total-div">
+              <div class="header-div">
+                  <h1>Computer</h1>
+                  <div class="ops-and-data-div">
+                      <div class="button-div">
+                        <button class="start-button">Play</button>
+                        <button class="stop-button">Quit</button>
+                      </div>
+                      <div class="displayed-data">
+                          <p class="health-p">Health:</p>
+                          <div class="total-progress">
+                            <div class="progress-div"></div>
+                            <div class="progress-value"></div>
+                          </div>
+                        <p class="score">Score:<span class="score-span">100</span></p>
+                      </div>
+                  </div>
+              </div>
+              <div class="game-div">
+                  <canvas class="canvas"></canvas>
+              </div>
+          </div>
+          <script src="maze.js"></script>
+          <script src="app.js"></script>
+      </body>
+  </html>
