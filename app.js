@@ -13,11 +13,11 @@ function generateGame() {
    }
 
 function playMoves(e) {
-//if generationComplete is true
-  if (!generationComplete) return;
-// then keyPressed = the keydown event key
+//if generationComplete is false return.
+  if (generationComplete === false) return;
+// else keyPressed = the keydown event key
   let keyPressed = e.key;
-// locate the current position assign to variables for future manipulation
+// then locate the current position assign to variables for future manipulation
   let row = currentCell.rowNum;
   let col = currentCell.colNum;
 

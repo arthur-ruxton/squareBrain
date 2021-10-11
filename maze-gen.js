@@ -6,6 +6,9 @@ let context = maze.getContext("2d");
 let generationComplete = false;
 
 let currentCell;
+ let specialCellOne;
+ let randomColNum = Math.floor(Math.random() * 10);
+ let randomCellNum = Math.floor(Math.random() * 10)
 
 //class for building the maze
 class Maze {
@@ -28,6 +31,7 @@ class Maze {
     }
     // where we start in the grid
     currentCell = this.grid[0][0];
+     specialCellOne = this.grid[randomColNum][randomCellNum];
   }
 
 // this function will draw the grid in it's present state to the canvas
@@ -56,7 +60,6 @@ class Maze {
       currentCell.removeWalls(currentCell, next);
       // we move into the randomly chosen unvisited neighbour and assign to currentCell to continue the process
       currentCell = next;
-
     // else if all cells have been visited start working backwords through the stack / maze highlighting as we go
     } else if (this.stack.length > 0) {
       let cell = this.stack.pop();
@@ -69,6 +72,7 @@ class Maze {
       generationComplete = true;
       return;
     }
+    
     // recursively call the draw function until stack array is empty (backtracking complete / generation complete)
     window.requestAnimationFrame(() => {
       this.draw();
@@ -114,13 +118,23 @@ class Cell {
     if (leftNeigbour && !leftNeigbour.visited) neighbours.push(leftNeigbour);
 
     // select a random unvisited neighbour from the neighbours array
-    if (neighbours.length !== 0) {
-      let random = Math.floor(Math.random() * neighbours.length);
-      return neighbours[random];
-    } else {
-      return undefined;
-    }
+    if (neighbours.length !== 0 && currentCell === specialCellOne) {
+      specialCellOne.walls.topWall = false;
+      specialCellOne.walls.rightWall = false;
+      specialCellOne.walls.bottomWall = false;
+      specialCellOne.walls.leftWall = false;
+  
+      topNeigbour.walls.bottomWall = false;
+      rightNeigbour.walls.leftWall = false;
+      bottomNeigbour.walls.topWall = false;
+      leftNeigbour.walls.rightWall = false;
+    } else if (neighbours.length !== 0) {
+    let random = Math.floor(Math.random() * neighbours.length);
+    return neighbours[random];
+  } else {
+    return undefined;
   }
+}
 
 // the next 4 functions are called if the relevant walls are set to true in the cell constructor method 
   drawTopWall(x, y, size, columns, rows) {
@@ -165,6 +179,14 @@ class Cell {
     );
   }
 
+  // this wall remove all walls of
+  // removeWallsOfSpecialCell(cell1){
+  //   cell1.walls.leftWall = false;
+  //   cell1.walls.rightWall = false;
+  //   cell1.walls.rightWall = false;
+  //   cell1.walls.leftWall = false;
+  // }
+
   // in the cell class constructor => setting walls object properties to false depending on calculation below
   removeWalls(cell1, cell2) {
     // compare cells on the x axis (cerrent cell & randomly selected unvisited neighbouring cell)
@@ -187,6 +209,7 @@ class Cell {
       cell1.walls.bottomWall = false;
       cell2.walls.topWall = false;
     }
+    
   }
 
   // when called this function draws the individual cell 
