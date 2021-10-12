@@ -6,6 +6,8 @@ let context = maze.getContext("2d");
 let generationComplete = false;
 
 let currentCell;
+
+// The following lines help create 'special cells' which have no walls, increasing the number of potential routes through the maze.
  let specialCellOne;
  let specialCellTwo;
  let randRow = Math.floor(Math.random() * 3);
@@ -119,7 +121,7 @@ class Cell {
     if (bottomNeigbour && !bottomNeigbour.visited) neighbours.push(bottomNeigbour);
     if (leftNeigbour && !leftNeigbour.visited) neighbours.push(leftNeigbour);
 
-    // select a random unvisited neighbour from the neighbours array
+  // if special cell remove all walls and all walls touching this cell
     if (neighbours.length !== 0 && currentCell === specialCellOne) {
       specialCellOne.walls.topWall = false;
       specialCellOne.walls.rightWall = false;
@@ -140,6 +142,7 @@ class Cell {
       rightNeigbour.walls.leftWall = false;
       bottomNeigbour.walls.topWall = false;
       leftNeigbour.walls.rightWall = false;
+    // else select a random unvisited neighbour from the neighbours array
     } else if (neighbours.length !== 0) {
     let random = Math.floor(Math.random() * neighbours.length);
     return neighbours[random];
