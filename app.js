@@ -1,5 +1,5 @@
 // initialize game
-let newMaze = new Maze(600, 15, 15);
+let newMaze = new Maze(800, 16, 16);
 // let complete = document.querySelector(".complete");
 
 // start button triggers maze-gen functionality

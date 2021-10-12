@@ -7,8 +7,9 @@ let generationComplete = false;
 
 let currentCell;
  let specialCellOne;
- let randomColNum = Math.floor(Math.random() * 10);
- let randomCellNum = Math.floor(Math.random() * 10)
+ let specialCellTwo;
+ let randRow = Math.floor(Math.random() * 3);
+ let randCellInRow = Math.floor(Math.random() * 3)
 
 //class for building the maze
 class Maze {
@@ -31,7 +32,8 @@ class Maze {
     }
     // where we start in the grid
     currentCell = this.grid[0][0];
-     specialCellOne = this.grid[randomColNum][randomCellNum];
+     specialCellOne = this.grid[1][1];
+     specialCellTwo = this.grid[randRow + 1][randCellInRow + 6];
   }
 
 // this function will draw the grid in it's present state to the canvas
@@ -123,6 +125,16 @@ class Cell {
       specialCellOne.walls.rightWall = false;
       specialCellOne.walls.bottomWall = false;
       specialCellOne.walls.leftWall = false;
+  
+      topNeigbour.walls.bottomWall = false;
+      rightNeigbour.walls.leftWall = false;
+      bottomNeigbour.walls.topWall = false;
+      leftNeigbour.walls.rightWall = false;
+    } else if(neighbours.length !== 0 && currentCell === specialCellTwo){
+      specialCellTwo.walls.topWall = false;
+      specialCellTwo.walls.rightWall = false;
+      specialCellTwo.walls.bottomWall = false;
+      specialCellTwo.walls.leftWall = false;
   
       topNeigbour.walls.bottomWall = false;
       rightNeigbour.walls.leftWall = false;
