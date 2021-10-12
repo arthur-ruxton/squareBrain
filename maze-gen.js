@@ -6,12 +6,14 @@ let context = maze.getContext("2d");
 let generationComplete = false;
 
 let currentCell;
-
-// The following lines help create 'special cells' which have no walls, increasing the number of potential routes through the maze.
+// introducing target
+let finishline;
+ // The following lines help create 'special cells' which have no walls, increasing the number of potential routes through the maze.
  let specialCellOne;
  let specialCellTwo;
  let randRow = Math.floor(Math.random() * 3);
- let randCellInRow = Math.floor(Math.random() * 3)
+ let randCellInRow = Math.floor(Math.random() * 3);
+
 
 //class for building the maze
 class Maze {
@@ -34,8 +36,11 @@ class Maze {
     }
     // where we start in the grid
     currentCell = this.grid[0][0];
-     specialCellOne = this.grid[1][1];
-     specialCellTwo = this.grid[randRow + 1][randCellInRow + 6];
+    this.grid[this.rows - 1][this.columns - 1].finishline = true;
+    // defining the position of two special cells, one of which is, to an extent, randomly placed 
+    specialCellOne = this.grid[1][1];
+    specialCellTwo = this.grid[randRow + 1][randCellInRow + 6];
+    // finishLine = this.grid[this.rows - 1][this.columns - 1];
   }
 
 // this function will draw the grid in it's present state to the canvas
@@ -121,7 +126,7 @@ class Cell {
     if (bottomNeigbour && !bottomNeigbour.visited) neighbours.push(bottomNeigbour);
     if (leftNeigbour && !leftNeigbour.visited) neighbours.push(leftNeigbour);
 
-  // if special cell remove all walls and all walls touching this cell
+    // if special cell remove all walls and all walls touching this cell
     if (neighbours.length !== 0 && currentCell === specialCellOne) {
       specialCellOne.walls.topWall = false;
       specialCellOne.walls.rightWall = false;
@@ -142,7 +147,7 @@ class Cell {
       rightNeigbour.walls.leftWall = false;
       bottomNeigbour.walls.topWall = false;
       leftNeigbour.walls.rightWall = false;
-    // else select a random unvisited neighbour from the neighbours array
+    // select a random unvisited neighbour from the neighbours array
     } else if (neighbours.length !== 0) {
     let random = Math.floor(Math.random() * neighbours.length);
     return neighbours[random];
@@ -185,12 +190,12 @@ class Cell {
   highlight(columns) {
     let x = (this.colNum * this.parentSize) / columns + 1;
     let y = (this.rowNum * this.parentSize) / columns + 1;
-    context.fillStyle = "purple";
+    context.fillStyle = "Coral";
     context.fillRect(
       x,
       y,
-      this.parentSize / columns - 3,
-      this.parentSize / columns - 3
+      this.parentSize / columns - 2,
+      this.parentSize / columns - 2
     );
   }
 
@@ -231,7 +236,7 @@ class Cell {
   show(size, rows, columns) {
     let x = (this.colNum * size) / columns;
     let y = (this.rowNum * size) / rows;
-    context.strokeStyle = "white";
+    context.strokeStyle = "DarkSalmon";
     context.fillStyle = "black";
     context.lineWidth = 2;
     if (this.walls.topWall) this.drawTopWall(x, y, size, columns, rows);
@@ -239,6 +244,11 @@ class Cell {
     if (this.walls.bottomWall) this.drawBottomWall(x, y, size, columns, rows);
     if (this.walls.leftWall) this.drawLeftWall(x, y, size, columns, rows);
     if (this.visited) {
+      context.fillRect(x + 1, y + 1, size / columns - 2, size / rows - 2);
+    }
+  // reveal the finnish line with it's own color
+    if (this.finishline) {
+      context.fillStyle = "MediumSeaGreen";
       context.fillRect(x + 1, y + 1, size / columns - 2, size / rows - 2);
     }
   }
