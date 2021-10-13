@@ -1,6 +1,6 @@
 let newMaze;
-// let complete = document.querySelector(".complete");
-//start button triggers first maze generation then pops off the screen.
+let score = 0;
+let scoreDisplay = document.querySelector(".score-span");
 startButton = document.querySelector(".start-button");
 document.querySelector(".start-button").addEventListener('click', () => {
   generateGame(800, 16, 16, 'levelOne');
@@ -9,10 +9,18 @@ document.querySelector(".start-button").addEventListener('click', () => {
 document.addEventListener("keydown", playerMoves);
 document.addEventListener("keydown", completeLevel);
 
+// removing the start button 
 function removeButton(){
   startButton.remove();
 }
 
+// when called, this function will increase the score and dispay it in the browser
+function addPoints(points){
+  score += points;
+  scoreDisplay.innerText = score;
+}
+
+// this allows you to generate different levels 
 function generateGame(size, rows, columns, level) {
   newMaze  = new Maze(size, rows, columns, level);
   newMaze.setup();
@@ -76,6 +84,7 @@ function playerMoves(e) {
   }
 }
 
+// logic for generating next level
 function completeLevel(e){
   let finishKey = e.key;
   let level = newMaze.level;
@@ -84,16 +93,20 @@ function completeLevel(e){
     case "levelOne":
       if(currentCell.finishline && finishKey === "Enter"){
         generateGame(800, 20, 20, "levelTwo");
+        addPoints(50);
       }
       break;
     case "levelTwo":
       if(currentCell.finishline && finishKey === "Enter"){
         generateGame(800, 25, 25, "levelThree");
+        addPoints(100);
       }
       break;
     case "levelThree":
       if(currentCell.finishline && finishKey === "Enter"){
-        complete
+        addPoints(150);
+        scoreDisplay.innerText = score;
+        // complete()
       }
       break;  
     }
