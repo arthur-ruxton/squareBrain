@@ -9,10 +9,9 @@ let currentCell;
 // introducing target
 let finishline;
  // The following lines help create 'special cells' which have no walls, increasing the number of potential routes through the maze.
- let specialCellOne;
- let specialCellTwo;
- let randRow = Math.floor(Math.random() * 3);
- let randCellInRow = Math.floor(Math.random() * 3);
+let specialCell;
+let randRow = Math.floor(Math.random() * 3);
+let randCellInRow = Math.floor(Math.random() * 3);
 
 
 //class for building the maze
@@ -38,9 +37,12 @@ class Maze {
     // where we start in the grid
     currentCell = this.grid[0][0];
     this.grid[this.rows - 1][this.columns - 1].finishline = true;
-    // defining the position of two special cells, one of which is, to an extent, randomly placed 
-    specialCellOne = this.grid[1][1];
-    specialCellTwo = this.grid[randRow + 1][randCellInRow + 4];
+    // defining the position of five special cells, four of which are, to an extent, randomly placed 
+    this.grid[1][1].specialCell = true;
+    this.grid[randRow + 1][randCellInRow + 9].specialCell = true;
+    this.grid[randRow + 5][randCellInRow + 5].specialCell = true;
+    this.grid[randRow + 9][randCellInRow + 3].specialCell = true;
+    this.grid[randRow + 11][randCellInRow + 1].specialCell = true;
   }
 
 // this function will draw the grid in it's present state to the canvas
@@ -127,27 +129,16 @@ class Cell {
     if (leftNeigbour && !leftNeigbour.visited) neighbours.push(leftNeigbour);
 
     // if special cell remove all walls and all walls touching this cell
-    if (neighbours.length !== 0 && currentCell === specialCellOne) {
-      specialCellOne.walls.topWall = false;
-      specialCellOne.walls.rightWall = false;
-      specialCellOne.walls.bottomWall = false;
-      specialCellOne.walls.leftWall = false;
+    if (neighbours.length !== 0 && this.specialCell) {
+      currentCell.walls.topWall = false;
+      currentCell.walls.rightWall = false;
+      currentCell.walls.bottomWall = false;
+      currentCell.walls.leftWall = false;
   
       topNeigbour.walls.bottomWall = false;
       rightNeigbour.walls.leftWall = false;
       bottomNeigbour.walls.topWall = false;
       leftNeigbour.walls.rightWall = false;
-    } else if(neighbours.length !== 0 && currentCell === specialCellTwo){
-      specialCellTwo.walls.topWall = false;
-      specialCellTwo.walls.rightWall = false;
-      specialCellTwo.walls.bottomWall = false;
-      specialCellTwo.walls.leftWall = false;
-  
-      topNeigbour.walls.bottomWall = false;
-      rightNeigbour.walls.leftWall = false;
-      bottomNeigbour.walls.topWall = false;
-      leftNeigbour.walls.rightWall = false;
-    // select a random unvisited neighbour from the neighbours array
     } else if (neighbours.length !== 0) {
     let random = Math.floor(Math.random() * neighbours.length);
     return neighbours[random];
