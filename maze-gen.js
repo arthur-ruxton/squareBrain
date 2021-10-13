@@ -17,12 +17,13 @@ let finishline;
 
 //class for building the maze
 class Maze {
-  constructor(size, rows, columns) {
+  constructor(size, rows, columns, level) {
     this.size = size;
     this.columns = columns;
     this.rows = rows;
     this.grid = [];
     this.stack = [];
+    this.level = level;
   }
 // maze takes in size, rows and columns - setup loops through rows creating a cell instance for each column => pushes cells to grid array 
   setup() {
