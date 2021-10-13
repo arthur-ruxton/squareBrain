@@ -39,8 +39,7 @@ class Maze {
     this.grid[this.rows - 1][this.columns - 1].finishline = true;
     // defining the position of two special cells, one of which is, to an extent, randomly placed 
     specialCellOne = this.grid[1][1];
-    specialCellTwo = this.grid[randRow + 1][randCellInRow + 6];
-    // finishLine = this.grid[this.rows - 1][this.columns - 1];
+    specialCellTwo = this.grid[randRow + 1][randCellInRow + 4];
   }
 
 // this function will draw the grid in it's present state to the canvas

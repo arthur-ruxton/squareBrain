@@ -1,13 +1,21 @@
 // initialize game
-let newMaze = new Maze(800, 16, 16);
+let newMaze;
 // let complete = document.querySelector(".complete");
-
 // start button triggers maze-gen functionality
-document.querySelector(".start-button").addEventListener('click', generateGame)
+startButton = document.querySelector(".start-button");
+document.querySelector(".start-button").addEventListener('click', () => {
+  generateGame();
+  removeButton();
+});
 // DOM listens for keydown events, call playerMoves
 document.addEventListener("keydown", playMoves);
 
+function removeButton(){
+  startButton.remove();
+}
+
 function generateGame() {
+  newMaze = new Maze(800, 16, 16);
     newMaze.setup();
     newMaze.draw();
    }

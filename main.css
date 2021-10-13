@@ -7,7 +7,8 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Roboto Mono', monospace;
-    background-color: black;
+    background-color: rgb(180, 157, 157);
+    color: green;
 }
 
 .total-div {
