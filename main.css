@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Roboto Mono', monospace;
-    background-color: rgb(180, 157, 157);
+    background-color: rgb(251, 253, 140);
     color: green;
 }
 
@@ -86,9 +86,11 @@ button {
 /* --------------------------- canvas ------------------------------ */
 
 .game-div {
+    display: flex;
+    justify-content: center;
     width: 800px;
     height: 800px;
-    background-color: black;
+    background-color: rgb(41, 41, 49);
 }
 
 #canvas {

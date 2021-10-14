@@ -13,6 +13,7 @@ let specialCell;
 let randRow = Math.floor(Math.random() * 3);
 let randCellInRow = Math.floor(Math.random() * 3);
 
+let valueCell;
 
 //class for building the maze
 class Maze {
@@ -26,6 +27,10 @@ class Maze {
   }
 // maze takes in size, rows and columns - setup loops through rows creating a cell instance for each column => pushes cells to grid array 
   setup() {
+    let specialCell;
+    let randRow = Math.floor(Math.random() * 3);
+    let randCellInRow = Math.floor(Math.random() * 3);
+
     for (let r = 0; r < this.rows; r++) {
       let row = [];
       for (let c = 0; c < this.columns; c++) {
@@ -39,17 +44,91 @@ class Maze {
     this.grid[this.rows - 1][this.columns - 1].finishline = true;
     // defining the position of five special cells, four of which are, to an extent, randomly placed 
     this.grid[1][1].specialCell = true;
-    this.grid[randRow + 1][randCellInRow + 9].specialCell = true;
-    this.grid[randRow + 5][randCellInRow + 5].specialCell = true;
-    this.grid[randRow + 9][randCellInRow + 3].specialCell = true;
-    this.grid[randRow + 11][randCellInRow + 1].specialCell = true;
+    this.grid[randRow + 1][randCellInRow + 1].specialCell = true;
+    this.grid[randRow + 1][randCellInRow + 8].specialCell = true;
+    this.grid[randRow + 8][randCellInRow + 1].specialCell = true;
+    this.grid[randRow + 8][randCellInRow + 8].specialCell = true;
+  }
+
+  valueCellmakerOne() {
+    this.grid[this.rows - 1][0].valueCell = true;
+    this.grid[0][this.rows - 1].valueCell = true;
+    this.grid[1][7].valueCell = true;
+    this.grid[2][14].valueCell = true;
+    this.grid[3][5].valueCell = true;
+    this.grid[4][10].valueCell = true;
+    this.grid[5][11].valueCell = true;
+    this.grid[6][3].valueCell = true;
+    this.grid[7][7].valueCell = true;
+    this.grid[8][2].valueCell = true;
+    this.grid[9][9].valueCell = true;
+    this.grid[10][1].valueCell = true;
+    this.grid[11][13].valueCell = true;
+    this.grid[12][4].valueCell = true;
+    this.grid[13][6].valueCell = true;
+    this.grid[14][12].valueCell = true;
+    this.grid[15][8].valueCell = true;
+  }
+
+  valueCellmakerTwo() {
+    this.grid[this.rows - 1][0].valueCell = true;
+    this.grid[0][this.rows - 1].valueCell = true;
+    this.grid[1][7].valueCell = true;
+    this.grid[2][17].valueCell = true;
+    this.grid[3][5].valueCell = true;
+    this.grid[4][15].valueCell = true;
+    this.grid[5][10].valueCell = true;
+    this.grid[6][2].valueCell = true;
+    this.grid[7][13].valueCell = true;
+    this.grid[8][16].valueCell = true;
+    this.grid[9][4].valueCell = true;
+    this.grid[10][11].valueCell = true;
+    this.grid[11][3].valueCell = true;
+    this.grid[12][6].valueCell = true;
+    this.grid[13][14].valueCell = true;
+    this.grid[14][18].valueCell = true;
+    this.grid[15][9].valueCell = true;
+    this.grid[16][8].valueCell = true;
+    this.grid[17][12].valueCell = true;
+    this.grid[18][1].valueCell = true;
+    this.grid[19][19].valueCell = true;
+ }
+
+  valueCellmakerThree() {
+     this.grid[this.rows - 1][0].valueCell = true;
+     this.grid[0][this.rows - 1].valueCell = true;
+     this.grid[1][7].valueCell = true;
+     this.grid[2][24].valueCell = true;
+     this.grid[3][5].valueCell = true;
+     this.grid[4][21].valueCell = true;
+     this.grid[5][10].valueCell = true;
+     this.grid[6][2].valueCell = true;
+     this.grid[7][13].valueCell = true;
+     this.grid[8][16].valueCell = true;
+     this.grid[9][23].valueCell = true;
+     this.grid[10][14].valueCell = true;
+     this.grid[11][3].valueCell = true;
+     this.grid[12][6].valueCell = true;
+     this.grid[13][14].valueCell = true;
+     this.grid[14][18].valueCell = true;
+     this.grid[15][9].valueCell = true;
+     this.grid[16][8].valueCell = true;
+     this.grid[17][12].valueCell = true;
+     this.grid[18][22].valueCell = true;
+     this.grid[19][19].valueCell = true;
+     this.grid[20][1].valueCell = true;
+     this.grid[21][4].valueCell = true;
+     this.grid[22][15].valueCell = true;
+     this.grid[23][20].valueCell = true;
+     this.grid[24][17].valueCell = true;
+     this.grid[25][11].valueCell = true;
   }
 
 // this function will draw the grid in it's present state to the canvas
   draw() {
     maze.width = this.size;
     maze.height = this.size;
-    maze.style.background = "black";
+    maze.style.background = "none";
     // first cell has been visisted 
     currentCell.visited = true;
     // calling the show method on each cell in the 2d grid array 
@@ -178,10 +257,10 @@ class Cell {
 
   // highlight the current cell using passed in columns argument to match scale
   // additions and subtractions size the highlighted area so as to avoid overlapping walls
-  highlight(columns) {
+  highlight(columns, fill) {
     let x = (this.colNum * this.parentSize) / columns + 1;
     let y = (this.rowNum * this.parentSize) / columns + 1;
-    context.fillStyle = "Coral";
+    context.fillStyle = "Salmon";
     context.fillRect(
       x,
       y,
@@ -189,14 +268,6 @@ class Cell {
       this.parentSize / columns - 2
     );
   }
-
-  // this wall remove all walls of
-  // removeWallsOfSpecialCell(cell1){
-  //   cell1.walls.leftWall = false;
-  //   cell1.walls.rightWall = false;
-  //   cell1.walls.rightWall = false;
-  //   cell1.walls.leftWall = false;
-  // }
 
   // in the cell class constructor => setting walls object properties to false depending on calculation below
   removeWalls(cell1, cell2) {
@@ -228,15 +299,21 @@ class Cell {
     let x = (this.colNum * size) / columns;
     let y = (this.rowNum * size) / rows;
     context.strokeStyle = "DarkSalmon";
-    context.fillStyle = "black";
+    // context.fillStyle = "none";
     context.lineWidth = 2;
     if (this.walls.topWall) this.drawTopWall(x, y, size, columns, rows);
     if (this.walls.rightWall) this.drawRightWall(x, y, size, columns, rows);
     if (this.walls.bottomWall) this.drawBottomWall(x, y, size, columns, rows);
     if (this.walls.leftWall) this.drawLeftWall(x, y, size, columns, rows);
-    if (this.visited) {
-      context.fillRect(x + 1, y + 1, size / columns - 2, size / rows - 2);
+    if (this.valueCell){
+      context.fillStyle = "yellow";
+      context.beginPath()
+      context.arc(x + (size / columns / 2), y + (size / columns / 2), size / columns / 3, 0, 2 * Math.PI);
+      context.fill();
     }
+    // if (this.visited) {
+    //   context.fillRect(x + 1, y + 1, size / columns - 2, size / rows - 2);
+    // }
   // reveal the finnish line with it's own color
     if (this.finishline) {
       context.fillStyle = "MediumSeaGreen";

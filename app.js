@@ -1,9 +1,12 @@
+/////////////////// - init game - add points ////////////////////
+
 let newMaze;
 let score = 0;
 let scoreDisplay = document.querySelector(".score-span");
 startButton = document.querySelector(".start-button");
 document.querySelector(".start-button").addEventListener('click', () => {
   generateGame(800, 16, 16, 'levelOne');
+  newMaze.valueCellmakerOne();
   removeButton();
 });
 document.addEventListener("keydown", playerMoves);
@@ -14,7 +17,7 @@ function removeButton(){
   startButton.remove();
 }
 
-// when called, this function will increase the score and dispay it in the browser
+// when called this function will
 function addPoints(points){
   score += points;
   scoreDisplay.innerText = score;
@@ -25,7 +28,10 @@ function generateGame(size, rows, columns, level) {
   newMaze  = new Maze(size, rows, columns, level);
   newMaze.setup();
   newMaze.draw();
+  document.addEventListener("keydown", grabCoin);
  }
+
+/////////////////// - player movement & level completion logic /////////////////////////////
 
 function playerMoves(e) {
 //if generationComplete is false return
@@ -93,12 +99,14 @@ function completeLevel(e){
     case "levelOne":
       if(currentCell.finishline && finishKey === "Enter"){
         generateGame(800, 20, 20, "levelTwo");
+        newMaze.valueCellmakerTwo();
         addPoints(50);
       }
       break;
     case "levelTwo":
       if(currentCell.finishline && finishKey === "Enter"){
         generateGame(800, 25, 25, "levelThree");
+        newMaze.valueCellmakerThree();
         addPoints(100);
       }
       break;
@@ -106,8 +114,40 @@ function completeLevel(e){
       if(currentCell.finishline && finishKey === "Enter"){
         addPoints(150);
         scoreDisplay.innerText = score;
-        // complete()
+        complete()
       }
       break;  
     }
 }
+
+function grabCoin(e){
+  let finishKey = e.key;
+  let level = newMaze.level;
+
+  switch(level){
+    case "levelOne":
+      if(currentCell.valueCell){
+        addPoints(10);
+        currentCell.valueCell = false;
+      }
+      break;
+     case "levelTwo":
+       if(currentCell.valueCell){
+        addPoints(15);
+        currentCell.valueCell = false;
+       }
+       break;
+     case "levelThree":
+       if(currentCell.valueCell){
+        addPoints(20);
+        currentCell.valueCell = false;
+     }
+  }
+}
+
+function complete(){
+  context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+  maze.style.background = "none";
+  gameDiv.style.display = "none";
+}
+
