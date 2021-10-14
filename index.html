@@ -10,13 +10,13 @@
       <body>
           <div class="total-div">
               <div class="header-div">
-                  <h1>squareBrain</h1>
+                  <h1>squareBrain()</h1>
                   <div class="ops-and-data-div">
                       <div class="button-div">
                         <button class="start-button">Play</button>
                       </div>
                       <div class="displayed-data">
-                          <p class="health-p">Health:</p>
+                          <p class="time-p">Time:</p>
                           <div class="total-progress">
                             <div class="progress-div"></div>
                             <div class="progress-value"></div>
@@ -25,8 +25,16 @@
                       </div>
                   </div>
               </div>
-              <div class="game-div">
+              <div class="total-game-div">
+                <div class="maze-div">
                   <canvas class="canvas"></canvas>
+                </div>
+                <div class="end-game">
+                  <p class="end-game-result"></p>
+                  <div class="end-game-score-div">
+                    <p class="end-game-message"></p>
+                    <span class="end-game-score"></span></div>
+                </div>
               </div>
           </div>
           <script src="maze-gen.js"></script>

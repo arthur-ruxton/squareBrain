@@ -7,8 +7,8 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Roboto Mono', monospace;
-    background-color: rgb(251, 253, 140);
-    color: green;
+    background-color: rgb(167, 255, 167);
+    color: #5c8f5c;
 }
 
 .total-div {
@@ -22,14 +22,13 @@ body {
 /* --------------------------- h1 / buttons ------------------------------ */
 
 h1 {
-    color: rgb(13, 160, 13);
-    margin: auto;
+    color: #5c8f5c;
+    margin: auto 0;
 }
 
 .header-div {
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
 .ops-and-data-div {
@@ -44,55 +43,102 @@ h1 {
     display: flex;
     align-self: left;
     gap: 10px;
-    width: 20%;
+    width: 5%;
 }
 
 button {
     margin: auto 0;
     font-size: 1em;
     font-family: 'Roboto Mono', monospace;
+    color: rgb(167, 255, 167);
+    background-color: #5c8f5c;
+    border: 2px solid #5c8f5c;
+    border-radius: 5px;;
 }
 
 .displayed-data {
     display: flex;
     justify-content: right;
-    width: 70%;
+    width: 95%;
     margin: 0 auto;
 }
 
-.total-progress{
+.total-progress {
     margin: auto 4% auto 1%;
     display: flex;
-    width: 250px;
+    width: 480px;
     height: 15px;
 }
 
-.progress-div{
+.progress-div {
     position: absolute;
-    width: 250px;
+    width: 480px;
     height: 15px;
-    border: 2px solid green;
+    border: 2px solid #5c8f5c;
     border-radius: 5px;
     z-index: 1;
 }
 
-.progress-value{
-    width: 50%;
+.progress-value {
     height: 15px;
     border-radius: 5px;
-    background-color: rgb(13, 160, 13);
+    background-color: #3cb371;
     z-index: -1;
 }
-/* --------------------------- canvas ------------------------------ */
+/* --------------------------- game area ------------------------------ */
 
-.game-div {
+.total-game-div {
     display: flex;
     justify-content: center;
     width: 800px;
     height: 800px;
-    background-color: rgb(41, 41, 49);
+    background-color: rgb(146, 216, 146);
 }
 
-#canvas {
-    margin: 30px;
-} 
+.maze-div {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background-color: none;
+    z-index: 1;
+}
+
+/* --------------------------- end of game display ------------------------------ */
+
+.end-game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    margin: 200px 150px 300px 150px;
+    width: 400px;
+    height: 200px;
+    color: #9dd154;
+    border: 2px solid none;
+    border-radius: 20px;
+}
+
+.end-game-result {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 2%;
+}
+
+.end-game-score-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.end-game-message {
+    margin: auto 0 auto 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+.end-game-score {
+    margin: auto 0 auto 0;
+    text-align: center;
+    font-size: 5em;
+}

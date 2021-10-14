@@ -4,9 +4,21 @@ let newMaze;
 
 // this will be true if the final level is completed and will clear the timer interval
 let complete = false;
+// score display
 let score = 0;
 let scoreDisplay = document.querySelector(".score-span");
+scoreDisplay.innerText = score;
+// time display
+let timeBar = document.querySelector('.progress-value');
+let timeBarVal = 480;
+timeBar.style.width = `${timeBarVal}px`;
 
+// end of game display set in game-over and game-complete functions
+let endGameDisplay = document.querySelector('.end-game');
+let endGameResult = document.querySelector('.end-game-result');
+let endGameMessage = document.querySelector('.end-game-message');
+let endGameScore = document.querySelector('.end-game-score');
+let totalGameDiv = document.querySelector('.total-game-div');
 /////////////////// start button ////////////////////
 startButton = document.querySelector(".start-button");
 document.querySelector(".start-button").addEventListener('click', () => {
@@ -21,16 +33,20 @@ function removeButton(){
   startButton.remove();
 }
   
-// time limit function
+/////////////////// time limit ///////////////////
  function startTimer(){
-   let time = 300;
+  let time = 240;
 
    let timer = setInterval(() => {
      time--;
-     console.log(time);
+     timeBarVal -= 2;
+     timeBar.style.width = `${timeBarVal}px`;
+     if(time < 80){
+      timeBar.style.backgroundColor = "#a15b43"
+     }
      if(time === 0){
        clearInterval(timer);
-       gameOver();
+       endGame("OVER", "#a15b43");
      } else if(complete === true){
       clearInterval(timer);
      }
@@ -155,15 +171,15 @@ function completeLevel(e){
       if(currentCell.finishline && finishKey === "Enter"){
         generateGame(800, 25, 25, "levelThree");
         newMaze.valueCellmakerThree();
-        addPoints(100);
+        addPoints(70);
       }
       break;
     case "levelThree":
       if(currentCell.finishline && finishKey === "Enter"){
         complete = true;
-        addPoints(150);
+        addPoints(90);
         scoreDisplay.innerText = score;
-        gameComplete()
+        endGame("COMPLETE", "#43a159");
       }
       break;  
     }
@@ -171,12 +187,13 @@ function completeLevel(e){
 
 /////////////////////// finish game ////////////////////////
 
-function gameComplete(){
+function endGame(outcome, color){
   clearCanvas();
-}
-
-function gameOver(){
-  clearCanvas();
+  endGameDisplay.style.backgroundColor = color
+  endGameResult.textContent = `GAME ${outcome}!`;
+  endGameMessage.textContent = 'SCORE:';
+  endGameScore.textContent = score;
+  totalGameDiv.style.backgroundColor = "#9dd154";
 }
 
 function clearCanvas(){

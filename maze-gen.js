@@ -27,9 +27,6 @@ class Maze {
   }
 // maze takes in size, rows and columns - setup loops through rows creating a cell instance for each column => pushes cells to grid array 
   setup() {
-    let specialCell;
-    let randRow = Math.floor(Math.random() * 3);
-    let randCellInRow = Math.floor(Math.random() * 3);
 
     for (let r = 0; r < this.rows; r++) {
       let row = [];
@@ -121,7 +118,7 @@ class Maze {
      this.grid[22][15].valueCell = true;
      this.grid[23][20].valueCell = true;
      this.grid[24][17].valueCell = true;
-     this.grid[24][11].valueCell = true;
+     this.grid[25][11].valueCell = true;
   }
 
 // this function will draw the grid in it's present state to the canvas
@@ -260,7 +257,7 @@ class Cell {
   highlight(columns, fill) {
     let x = (this.colNum * this.parentSize) / columns + 1;
     let y = (this.rowNum * this.parentSize) / columns + 1;
-    context.fillStyle = "Salmon";
+    context.fillStyle = "#fa8072";
     context.fillRect(
       x,
       y,
@@ -298,25 +295,21 @@ class Cell {
   show(size, rows, columns) {
     let x = (this.colNum * size) / columns;
     let y = (this.rowNum * size) / rows;
-    context.strokeStyle = "DarkSalmon";
-    // context.fillStyle = "none";
+    context.strokeStyle = "#e9967a";
     context.lineWidth = 2;
     if (this.walls.topWall) this.drawTopWall(x, y, size, columns, rows);
     if (this.walls.rightWall) this.drawRightWall(x, y, size, columns, rows);
     if (this.walls.bottomWall) this.drawBottomWall(x, y, size, columns, rows);
     if (this.walls.leftWall) this.drawLeftWall(x, y, size, columns, rows);
     if (this.valueCell){
-      context.fillStyle = "yellow";
+      context.fillStyle = "#bcfc62";
       context.beginPath()
       context.arc(x + (size / columns / 2), y + (size / columns / 2), size / columns / 3, 0, 2 * Math.PI);
       context.fill();
     }
-    // if (this.visited) {
-    //   context.fillRect(x + 1, y + 1, size / columns - 2, size / rows - 2);
-    // }
-  // reveal the finnish line with it's own color
+  // highlight the finish line
     if (this.finishline) {
-      context.fillStyle = "MediumSeaGreen";
+      context.fillStyle = "#3cb371";
       context.fillRect(x + 1, y + 1, size / columns - 2, size / rows - 2);
     }
   }
