@@ -121,7 +121,7 @@ class Maze {
      this.grid[22][15].valueCell = true;
      this.grid[23][20].valueCell = true;
      this.grid[24][17].valueCell = true;
-     this.grid[25][11].valueCell = true;
+     this.grid[24][11].valueCell = true;
   }
 
 // this function will draw the grid in it's present state to the canvas
