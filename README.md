@@ -153,6 +153,14 @@ arthur-ruxton.github.io/Maze-Game
 </details>
 
 
+## Visuals :
+### On page load
 ![on page load](https://i.ibb.co/7V5gdnn/square-Brain-page-load.png)
-
-
+### Mid maze-generation
+![maze-generation](https://i.ibb.co/cCgyTh1/square-Brain-animation.png)
+### Harder level
+![on page load](https://i.ibb.co/NmGb6bM/square-Brain-hardest-level.png)
+### Game Over
+![on page load](https://i.ibb.co/jJwRJNN/square-Brain-game-over.png)
+### Game Complete
+![on page load](https://i.ibb.co/8crcRjZ/square-Brain-end-game.png)
