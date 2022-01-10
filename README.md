@@ -152,7 +152,9 @@ arthur-ruxton.github.io/Maze-Game
   </ul> 
 </details>
 
-
+<details>
+  <img src=https://user-images.githubusercontent.com/89402596/148796281-52e9e273-9dd9-4505-b7b9-66143d8ec623.png />
+</details>
 ## Visuals :
 ### On page load
 ![on page load](https://i.ibb.co/7V5gdnn/square-Brain-page-load.png)
