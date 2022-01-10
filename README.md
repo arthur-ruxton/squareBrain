@@ -22,7 +22,7 @@ arthur-ruxton.github.io/Maze-Game
       Press start and an animated, somewhat randomized, <em>maze-generation</em> will begin, triggering a timer. Closely observing the <em>animated path-finder algorithm</em> may help you solve the puzzle. 
     </li>
     <li>
-      <em>squareBrain() has three levels of complexity.</em> Navigate through all three mazes to complete the game.
+      squareBrain() has <em>three levels of complexity.</em> Navigate through all three mazes to complete the game.
     </li>
     <li>
       <em>Collect golden nugs</em> to increase your score as you go, they’re rarer and more valuable on harder levels.
@@ -37,17 +37,26 @@ arthur-ruxton.github.io/Maze-Game
 </details>
 
 <details>
-# Tech
-## HTML - 8.1% :
-* div containing logo, start-button & time-bar. (should have been header in retrospect) 
-* div containing HTML canvas element, onto which the game is drawn with J.S logic.
-* div containing end-game results - win / loss & score 
+  <summary>Tech</summary>
+    <details>
+      <summary>HTML - 8.1% :</summary>
+      <ul>
+        <li>div containing logo, start-button & time-bar. (should have been header in retrospect)</li>
+        <li>div containing HTML canvas element, onto which the game is drawn with J.S logic.</li>
+        <li>div containing end-game results - win / loss & score </li>
+      </ul>
+    </details>
+    <details>
+      <summary>CSS - 11.4% :</summary>
+      <ul>
+        <li>Positioning, fonts & colouring.</li>
+        <li>Time bar which decreases as time runs out and turns red to warn you at 30% </li>
+      </ul>
+    </details>
+    <details>
+      <summary>JavaScript - 80.5% :</summary>
+    </details>
 
-## CSS - 11.4% :
-* Positioning, fonts & colouring. 
-* Time bar which decreases as time runs out and turns red to warn you at 30% 
-
-## JavaScript - 80.5% :
 ### App.js - controls game-play :
 * Controls the time element of the game. 
 * The spec for different levels of complexity. 
