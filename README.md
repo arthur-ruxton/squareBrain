@@ -154,6 +154,6 @@ arthur-ruxton.github.io/Maze-Game
 
 <details>
   <summary>Visuals</summary>
-  ![picture alt](https://i.ibb.co/7V5gdnn/square-Brain-page-load.png "On page load")
+  ![on page load](https://i.ibb.co/7V5gdnn/square-Brain-page-load.png)
 </details>
 
