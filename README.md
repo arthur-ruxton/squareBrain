@@ -153,16 +153,25 @@ arthur-ruxton.github.io/Maze-Game
 </details>
 
 <details>
+  <p>On page load:</p>
   <img src=https://user-images.githubusercontent.com/89402596/148796281-52e9e273-9dd9-4505-b7b9-66143d8ec623.png />
+  
+  <p>Maze generation taking place (tiggered when user presses play):</p>
+  <img src=https://user-images.githubusercontent.com/89402596/148796755-e09a2dc9-b7bb-4618-8e6d-f58858ff2fcf.png />
+  
+  <p>Harder level:</p>
+  <img src=https://user-images.githubusercontent.com/89402596/148796857-6a99c168-1eb3-41a5-beae-f466729b0a76.png />
+  
+  <p>Game over:</p>
+  <img src=https://user-images.githubusercontent.com/89402596/148796975-4aa20c91-6fba-42b7-a07d-af526f1176da.png />
+  
+  <p>Game complete:</p>
+  <img src=https://user-images.githubusercontent.com/89402596/148797082-ad5208c2-f15f-4179-93f5-6c2078aa3103.png />
 </details>
-## Visuals :
-### On page load
-![on page load](https://i.ibb.co/7V5gdnn/square-Brain-page-load.png)
-### Mid maze-generation
-![maze-generation](https://i.ibb.co/cCgyTh1/square-Brain-animation.png)
-### Harder level
-![on page load](https://i.ibb.co/NmGb6bM/square-Brain-hardest-level.png)
-### Game Over
-![on page load](https://i.ibb.co/jJwRJNN/square-Brain-game-over.png)
-### Game Complete
-![on page load](https://i.ibb.co/8crcRjZ/square-Brain-end-game.png)
+
+
+
+
+
+
+
