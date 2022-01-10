@@ -153,6 +153,7 @@ arthur-ruxton.github.io/Maze-Game
 </details>
 
 <details>
+  <summary>Visuals</summary>
   <p>On page load:</p>
   <img src=https://user-images.githubusercontent.com/89402596/148796281-52e9e273-9dd9-4505-b7b9-66143d8ec623.png />
   
@@ -169,7 +170,64 @@ arthur-ruxton.github.io/Maze-Game
   <img src=https://user-images.githubusercontent.com/89402596/148797082-ad5208c2-f15f-4179-93f5-6c2078aa3103.png />
 </details>
 
+<details>
+  <summary>Key learnings:</summary>
+  <ul>
+    <li>
+      Identify a relevant existing system for accomplishing a complex task - study it as you implement it - achieve a different goal by creatively adapting the           system.
+    </li>
+    <li>Depth first search algorithm.</li>
+    <li>Event Listeners.</li>
+    <li>Timeouts.</li>
+    <li>HTML Canvas.</li>
+    <li>Flexbox</li>
+    <li>General planning techniques for code based projects</li>
+  </ul>
+</details>
 
+<details>
+  <summary>Challenges:</summary>
+  <ul>
+    <li>
+      Time management - packing as many features in as possible but making sure they all work effectively, removing the ones I couldn’t polish before deadline.         </li>
+    <li>
+      Adapting an existing implementation of a complex algorithm without breaking it (Introducing extra layers of complexity)
+      <ul>
+        <li>Ensuring there are multiple routes through the maze instead of just one.</li>
+        <li>The inclusion of ‘value cells’ which have coins in them</li>
+        <li>
+          Basing the size of the coins on the size of cells (which changes depending on the number of rows and columns on the level being played) and keeping the c           coins centered within the cells.</li>
+      </ul>
+    </li>
+  </ul>
+</details>
+
+<details>
+  <summary>Possible future improvements:</summary>
+  <ul>
+    <li>Make code ‘DRY’</li>
+    <li>Replay button</li>
+    <li>Randomise coin placement</li>
+    <li>Sound effects</li>
+    <li>Responsive design (screen-size compatibility & maybe even touch screen)</li>
+    <li>Local storage to store high-score</li>
+    <li>Difficulty settings (reduce time limit)</li>
+    <li>Translate into React.js - I’m certain this would present interesting challenges - (the maze generation in particular)</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Bugs:</summary>
+  <p>
+    If time runs out part way through the maze generation process of the second or third level, the process continues but the game over screen is displayed too -       the game is not ended properly.
+  </p>
+  <p>
+     I had to find work-arounds which were suboptimal in my opinion.  E.g. The value cells on each level are in fixed positions - when I randomised it, I broke the      maze-generation and never discovered why.
+  </p>
+  <p>
+    You have to move through the square-brain maze collecting tokens (which are worth more on higher levels) - if you reach the finish line and press enter, a maze     of greater complexity will be generated. You have a time limit to complete three levels, if time runs out, you lose. There are always multiple routes through       every maze, which was a difficult effect to create but I did accomplish that in time for my presentation. 
+  </p>
+</details>
 
 
 
