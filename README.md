@@ -16,12 +16,24 @@ arthur-ruxton.github.io/Maze-Game
 </details>
 
 <details>
-# squareBrain() - Overview.
-* Press start and an animated, somewhat randomized, __maze-generation__ will begin, triggering a timer. Closely observing the __animated path-finder algorithm__ may help you solve the puzzle. 
-* __squareBrain() has three levels of complexity.__ Navigate through all three mazes to complete the game.
-* __Collect golden nugs__ to increase your score as you go, they’re rarer and more valuable on harder levels.
-* __If time runs out__, it’s game over. 
-* There are 'specialCells'. The program removes all walls of any specialCell as well as any wall touching it. This is done to ensure __multiple potential__ routes, through each maze. 
+ <summary>squareBrain() - Overview.</summary>
+  <ul>
+    <li>
+      Press start and an animated, somewhat randomized, <em>maze-generation</em> will begin, triggering a timer. Closely observing the <em>animated path-finder algorithm</em> may help you solve the puzzle. 
+    </li>
+    <li>
+      <em>squareBrain() has three levels of complexity.</em> Navigate through all three mazes to complete the game.
+    </li>
+    <li>
+      <em>Collect golden nugs</em> to increase your score as you go, they’re rarer and more valuable on harder levels.
+    </li>
+    <li>
+      <em>If time runs out</em>, it’s game over. 
+    </li>
+    <li>
+      There are 'specialCells'. The program removes all walls of any specialCell as well as any wall touching it. This is done to ensure <em>multiple potential</em> routes, through each maze. 
+    </li>
+  </ul>
 </details>
 
 <details>
