@@ -38,49 +38,63 @@ arthur-ruxton.github.io/Maze-Game
 
 <details>
   <summary>Tech</summary>
-    <details>
-      <summary>HTML - 8.1% :</summary>
-      <ul>
-        <li>div containing logo, start-button & time-bar. (should have been header in retrospect)</li>
-        <li>div containing HTML canvas element, onto which the game is drawn with J.S logic.</li>
-        <li>div containing end-game results - win / loss & score </li>
-      </ul>
-    </details>
-    <details>
-      <summary>CSS - 11.4% :</summary>
-      <ul>
-        <li>Positioning, fonts & colouring.</li>
-        <li>Time bar which decreases as time runs out and turns red to warn you at 30% </li>
-      </ul>
-    </details>
-    <details>
-      <summary>JavaScript - 80.5% :</summary>
-      <details>
-        <summary>App.js - controls game-play :</summary>
-        <ul>
-          <li>Controls the time element of the game.</li>
-          <li>The spec for different levels of complexity.</li>
-          <li>The Keyboard event listeners for player movement & level completion.</li>
-          <li>Logic for collecting gold coins.</li>
-          <li>Displaying the end-game results (involves clearing the canvas and removing event listeners.)</li>
-        </ul>
-      </details>
-      <details>
-        <summary>Maze-gen.js - controls maze generation :</summary>
-        <ul>
-          <li>Depth-first-search algorithm implementation.</li>
-          <li>Animated drawing of a randomised maze every time it’s executed.</li>
-          <li>
-            Creates ‘special cells’ and removes all of their walls as it draws the cells - this logic ensures there are multiple potential routes through each maze.
-          </li>
-          <li>
-            Creates ‘Value cells’ and draws gold coins into them, the size of the coin is based on the size of the cell which is determined by the number of rows and columns in the current grid - this varies depending on the level you are on.
-          </li>
-          <li>‘Current cell’ - this cell is highlighted which helps to visualise the process of the depth-first search and also represents the player.</li>
-          <li>‘Finish Line’ - this cell is also highlighted with a different colour to indicate the finish line. </li>
-        </ul>
-      </details>
-    </details>
+    <ul>
+      <li>
+        <details>
+          <summary>HTML - 8.1% :</summary>
+          <ul>
+            <li>div containing logo, start-button & time-bar. (should have been header in retrospect)</li>
+            <li>div containing HTML canvas element, onto which the game is drawn with J.S logic.</li>
+            <li>div containing end-game results - win / loss & score </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>CSS - 11.4% :</summary>
+          <ul>
+            <li>Positioning, fonts & colouring.</li>
+            <li>Time bar which decreases as time runs out and turns red to warn you at 30% </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>JavaScript - 80.5% :</summary>
+          <ul>
+            <li>
+               <details>
+                  <summary>App.js - controls game-play :</summary>
+                  <ul>
+                    <li>Controls the time element of the game.</li>
+                    <li>The spec for different levels of complexity.</li>
+                    <li>The Keyboard event listeners for player movement & level completion.</li>
+                    <li>Logic for collecting gold coins.</li>
+                    <li>Displaying the end-game results (involves clearing the canvas and removing event listeners.)</li>
+                  </ul>
+                </details>
+            </li>
+            <li>
+              <details>
+                <summary>Maze-gen.js - controls maze generation :</summary>
+                <ul>
+                  <li>Depth-first-search algorithm implementation.</li>
+                  <li>Animated drawing of a randomised maze every time it’s executed.</li>
+                  <li>
+                    Creates ‘special cells’ and removes all of their walls as it draws the cells - this logic ensures there are multiple potential routes through                       each maze.
+                  </li>
+                  <li>
+                    Creates ‘Value cells’ and draws gold coins into them, the size of the coin is based on the size of the cell which is determined by the number                       of rows and columns in the current grid - this varies depending on the level you are on.
+                  </li>
+                  <li>‘Current cell’ - this cell is highlighted which helps to visualise the process of the depth-first search and also represents the player.</li>
+                  <li>‘Finish Line’ - this cell is also highlighted with a different colour to indicate the finish line. </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
 </details>
 
 <details>
