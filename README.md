@@ -98,28 +98,58 @@ arthur-ruxton.github.io/Maze-Game
 </details>
 
 <details>
-# Approach
-## Beginning - planning :
-My understanding of CSS grid and HTML Canvas was weak. I knew I wanted to create a maze based game. After some research, the prevailing established system I found for randomly generating mazes was to implement a depth first search algorithm. I watched some videos in which people used different technologies to do so but none of them were relevant to my knowledge of JavaScript and the task at hand. 
-  Eventually I came across a video in which a programmer translates a python3 implementation into a JavaScript implementation - I decided to follow along. It took me until 3am to understand and write this implementation correctly.
-
-## Middle - bulk of the project :
-Afew problems emerged at this point, I had my work cut out: 
-* The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the system to remove extra cell walls - without breaking the algorithm . 
-_This turned out to be difficult, the algorithm (and obviously the animation) broke on multiple attempts. I was worried it wouldn’t be possible._
-* I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
-The process would have to be different for each level (the maze should get more complex)
-* To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’ would be added into some cells.
-    There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size of the coins would have to be derived from the size of the cells containing them.
-_again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way through the process_
-* There should be a time element so that a player loses the game if they fail to complete all of the levels.
-
-## End - polishing & testing :
-Once I had ticked the boxes from step 2 there were other features I wanted to include;
-* Sound - I succeeded in doing this before my presentation but failed to get that version pushed to github in time. 
-* Animated time bar to show the user how much they had left. 
-* Display results. 
-* Write some css that would make the whole thing look nicer. 
+  <summary>Approach</summary>
+  <ul>
+    <li>
+      <details>
+        <summary>Beginning - planning :</summary>
+        <p>
+          My understanding of CSS grid and HTML Canvas was weak. I knew I wanted to create a maze based game. After some research, the prevailing established                 system I found for randomly generating mazes was to implement a depth first search algorithm. I watched some videos in which people used different                 technologies to do so but none of them were relevant to my knowledge of JavaScript and the task at hand. 
+        </p>
+        <p>
+          My understanding of CSS grid and HTML Canvas was weak. I knew I wanted to create a maze based game. After some research, the prevailing established                 system I found for randomly generating mazes was to implement a depth first search algorithm. I watched some videos in which people used different                 technologies to do so but none of them were relevant to my knowledge of JavaScript and the task at hand. 
+        </p>
+        <p>
+          Eventually I came across a video in which a programmer translates a python3 implementation into a JavaScript implementation - I decided to follow along.           It took me until 3am to understand and write this implementation correctly.
+        </p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>Middle - bulk of the project :</summary>
+        <p>Afew problems emerged at this point, I had my work cut out:</p>
+        <ul>
+          <li>
+            The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the                 system to remove extra cell walls - without breaking the algorithm. <em>This turned out to be difficult, the algorithm (and obviously the animation)               broke on multiple attempts. I was worried it wouldn’t be possible.</em>
+          </li>
+          <li>
+            I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
+            The process would have to be different for each level (the maze should get more complex)
+          </li>
+          <li>
+            To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’               would be added into some cells.
+            There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size             of the coins would have to be derived from the size of the cells containing them.
+            <em>again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way                 through the process</em>
+          </li>
+          <li>
+            There should be a time element so that a player loses the game if they fail to complete all of the levels.
+          </li>
+        </ul> 
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>End - polishing & testing :</summary>
+        <p>Once I had ticked the boxes from step 2 there were other features I wanted to include;</p>
+        <ul>
+          <li>Sound - I succeeded in doing this before my presentation but failed to get that version pushed to github in time.</li>
+          <li>Animated time bar to show the user how much they had left.</li>
+          <li>Display results.</li>
+          <li>Write some css that would make the whole thing look nicer.</li>
+        </ul>
+      </details>
+    </li>
+  </ul> 
 </details>
 
 <details>
