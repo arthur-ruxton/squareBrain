@@ -6,11 +6,13 @@ arthur-ruxton.github.io/Maze-Game
 
 <details>
   <summary>Aim</summary>
-* In one week, build a grid-based game using HTML, CSS and JavaScript.
-* Use CSS grid or for an added creative challenge, use HTML Canvas. 
-* It can be a direct clone of, or inspired by, an existing game. 
-* The game should include logic for losing and winning.
-* The game result should be displayed.
+  <ul>
+    <li>In one week, build a grid-based game using HTML, CSS and JavaScript.</li>
+    <li>Use CSS grid or for an added creative challenge, use HTML Canvas.</li>
+    <li>It can be a direct clone of, or inspired by, an existing game.</li>
+    <li>The game should include logic for losing and winning.</li>
+    <li>The game result should be displayed.</li>
+  </ul>
 </details>
 
 <details>
