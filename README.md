@@ -2,7 +2,8 @@
 # Project 1 - squareBrain() :robot:
 
 A maze game with three levels of complexity, which includes unique maze generation - achieved using an implementation / manipulation of the depth first search algorithm.
-arthur-ruxton.github.io/Maze-Game
+
+The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
 
 <details>
   <summary>Aim</summary>
