@@ -1,5 +1,5 @@
-# General Assembly
-# Project 1 - squareBrain() :robot:
+# General Assembly - Project 1
+# squareBrain() :robot:
 
 A maze game with three levels of complexity, which includes unique maze generation - achieved using an implementation / manipulation of the depth first search algorithm.
 
