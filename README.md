@@ -108,9 +108,6 @@ The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
           My understanding of CSS grid and HTML Canvas was weak. I knew I wanted to create a maze based game. After some research, the prevailing established                 system I found for randomly generating mazes was to implement a depth first search algorithm. I watched some videos in which people used different                 technologies to do so but none of them were relevant to my knowledge of JavaScript and the task at hand. 
         </p>
         <p>
-          My understanding of CSS grid and HTML Canvas was weak. I knew I wanted to create a maze based game. After some research, the prevailing established                 system I found for randomly generating mazes was to implement a depth first search algorithm. I watched some videos in which people used different                 technologies to do so but none of them were relevant to my knowledge of JavaScript and the task at hand. 
-        </p>
-        <p>
           Eventually I came across a video in which a programmer translates a python3 implementation into a JavaScript implementation - I decided to follow along.           It took me until 3am to understand and write this implementation correctly.
         </p>
       </details>
@@ -122,10 +119,12 @@ The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
         <ul>
           <li>
             The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the                 system to remove extra cell walls - without breaking the algorithm. <em>This turned out to be difficult, the algorithm (and obviously the animation)               broke on multiple attempts. I was worried it wouldn’t be possible.</em>
+            <img src=https://user-images.githubusercontent.com/89402596/149155026-a620a5c4-c875-4d56-b45b-87035bf49d5a.png />
           </li>
           <li>
             I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
             The process would have to be different for each level (the maze should get more complex)
+            <img src=https://user-images.githubusercontent.com/89402596/149156197-c8cd614f-3212-49e6-881c-7f64215d3b27.png />
           </li>
           <li>
             To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’               would be added into some cells.
@@ -172,7 +171,7 @@ The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
 </details>
 
 <details>
-  <summary>Key learnings:</summary>
+  <summary>Key learnings</summary>
   <ul>
     <li>
       Identify a relevant existing system for accomplishing a complex task - study it as you implement it - achieve a different goal by creatively adapting the           system.
@@ -187,7 +186,7 @@ The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
 </details>
 
 <details>
-  <summary>Challenges:</summary>
+  <summary>Challenges & Wins</summary>
   <ul>
     <li>
       Time management - packing as many features in as possible but making sure they all work effectively, removing the ones I couldn’t polish before deadline.         </li>
@@ -197,14 +196,16 @@ The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
         <li>Ensuring there are multiple routes through the maze instead of just one.</li>
         <li>The inclusion of ‘value cells’ which have coins in them</li>
         <li>
-          Basing the size of the coins on the size of cells (which changes depending on the number of rows and columns on the level being played) and keeping the c           coins centered within the cells.</li>
+          Basing the size of the coins on the size of cells (which changes depending on the number of rows and columns on the level being played) and keeping the c           coins centered within the cells.
+        </li>
       </ul>
+      <img src=https://user-images.githubusercontent.com/89402596/149155437-0e59a997-0b21-4291-8515-1b4e0c8e55e9.png />
     </li>
   </ul>
 </details>
 
 <details>
-  <summary>Possible future improvements:</summary>
+  <summary>Possible future improvements</summary>
   <ul>
     <li>Make code ‘DRY’</li>
     <li>Replay button</li>
@@ -218,7 +219,7 @@ The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
 </details>
 
 <details>
-  <summary>Bugs:</summary>
+  <summary>Bugs</summary>
   <p>
     If time runs out part way through the maze generation process of the second or third level, the process continues but the game over screen is displayed too -       the game is not ended properly.
   </p>
