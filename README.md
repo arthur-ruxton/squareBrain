@@ -196,7 +196,7 @@ The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
         <li>Ensuring there are multiple routes through the maze instead of just one.</li>
         <li>The inclusion of ‘value cells’ which have coins in them</li>
         <li>
-          Basing the size of the coins on the size of cells (which changes depending on the number of rows and columns on the level being played) and keeping the c           coins centered within the cells.
+          Basing the size of the coins on the size of cells (which changes depending on the number of rows and columns on the level being played) and keeping the           coins centered within the cells.
         </li>
       </ul>
       <img src=https://user-images.githubusercontent.com/89402596/149155437-0e59a997-0b21-4291-8515-1b4e0c8e55e9.png />
