@@ -7,9 +7,9 @@ The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
 
 <details>
   <summary>Goals</summary>
-  1. build a grid-based game using HTML, CSS and JavaScript.
-  2. Use CSS grid or for an added creative challenge, use HTML Canvas. 
-  3. It can be a direct clone of, or inspired by, an existing game. 
+  1. build a grid-based game using HTML, CSS and JavaScript. <br>
+  2. Use CSS grid or for an added creative challenge, use HTML Canvas. <br>
+  3. It can be a direct clone of, or inspired by, an existing game. <br>
   4. You should be able to win or lose and results should be displayed at the end.
 </details>
 
