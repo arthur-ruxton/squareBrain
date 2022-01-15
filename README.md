@@ -58,19 +58,19 @@ Once I had ticked the boxes from step 2 there were other features I wanted to in
 4. Write some CSS that would make the whole thing look nicer. 
 
 ## Code snippets
-###Within the depth first search algorithm -  defining ‘special cells’ which have no walls:
+### Within the depth first search algorithm -  defining ‘special cells’ which have no walls:
 <img width="924" alt="Screenshot 2022-01-15 at 14 10 24" src="https://user-images.githubusercontent.com/89402596/149624687-61555d46-ce99-4c10-9c3d-24f8e7d541b0.png"> <br>
-###A switch statement which defines the spec for different levels in the game - when ‘levelOne’ is completed, ‘levelTwo’ is generated:
+### A switch statement which defines the spec for different levels in the game - when ‘levelOne’ is completed, ‘levelTwo’ is generated:
 <img src="https://user-images.githubusercontent.com/89402596/149624735-d8d06dd8-75b6-45be-883b-8d55dfbdd9ee.png"/>
 
 ## Web site visuals:
-###On page load
+### On page load
 <img src=https://user-images.githubusercontent.com/89402596/149624832-2f8d7e72-bc66-409e-a4f0-ba90126de779.png /> <br>
-###Maze Generation process:
+### Maze Generation process:
 <img src=https://user-images.githubusercontent.com/89402596/149624896-caaeb462-45a6-4e0d-8b97-102ffde3f9a4.png /> <br>
-###Higher level:
+### Higher level:
 <img src=https://user-images.githubusercontent.com/89402596/149624916-253faf79-e2ef-44f0-a727-b0236b73ef27.png /> <br>
-###End of game screens:
+### End of game screens:
 <img src=https://user-images.githubusercontent.com/89402596/149624987-43f9640e-604a-4c4a-be0f-8177e03927e2.png />
 <img src=https://user-images.githubusercontent.com/89402596/149625006-f85d5220-6419-4481-8c25-2bdaae42098d.png />
 
