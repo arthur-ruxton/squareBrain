@@ -12,7 +12,7 @@ A maze game with three levels of complexity, which includes unique maze generati
 </details>
 
 <details>
- <summary>Overview</summary>
+ <summary>Overview :bulb:</summary>
  Press start and an animated, randomised, maze-generation will begin, triggering a timer. If time runs out, it’s game over. <br>
  Closely observing the animated path-finder algorithm may help you solve the puzzle. <br>
  squareBrain() has three levels of complexity. Navigate through all three mazes to complete the game. <br>
@@ -21,7 +21,7 @@ A maze game with three levels of complexity, which includes unique maze generati
 </details>
 
 <details>
-  <summary>Tech</summary> 
+  <summary>Tech :gear:</summary> 
     <h3>HTML - 8.1% :</h3>
     <ul>
       <li>div containing logo, start-button & time-bar. (should have been header in retrospect)</li>
@@ -58,7 +58,7 @@ A maze game with three levels of complexity, which includes unique maze generati
 </details>
 
 <details>
-  <summary>Approach</summary>
+  <summary>Approach :desktop_computer:</summary>
   <div>
     <h3>Beginning - planning :</h3>
     <p>
@@ -130,7 +130,7 @@ A maze game with three levels of complexity, which includes unique maze generati
 </details>
 
 <details>
-  <summary>Key learnings</summary>
+  <summary>Key learnings :open_book:</summary>
   <ul>
     <li>
       Identify a relevant existing system for accomplishing a complex task - study it as you implement it - achieve a different goal by creatively adapting the           system.
@@ -145,7 +145,7 @@ A maze game with three levels of complexity, which includes unique maze generati
 </details>
 
 <details>
-  <summary>Challenges & Wins</summary>
+  <summary>Challenges & Wins :chart_with_upwards_trend:</summary>
   <ul>
     <li>
       Time management - packing as many features in as possible but making sure they all work effectively, removing the ones I couldn’t polish before deadline.         </li>
