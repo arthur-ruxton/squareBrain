@@ -59,17 +59,17 @@ Once I had ticked the boxes from step 2 there were other features I wanted to in
 
 ## Code snippets
 **Within the depth first search algorithm -  defining ‘special cells’ which have no walls**:
-<img width="924" alt="Screenshot 2022-01-15 at 14 10 24" src="https://user-images.githubusercontent.com/89402596/149624687-61555d46-ce99-4c10-9c3d-24f8e7d541b0.png"> 
+<img width="924" alt="Screenshot 2022-01-15 at 14 10 24" src="https://user-images.githubusercontent.com/89402596/149624687-61555d46-ce99-4c10-9c3d-24f8e7d541b0.png"> <br>
 **A switch statement which defines the spec for different levels in the game - when ‘levelOne’ is completed, ‘levelTwo’ is generated**:
 <img src="https://user-images.githubusercontent.com/89402596/149624735-d8d06dd8-75b6-45be-883b-8d55dfbdd9ee.png"/>
 
 ## Web site visuals:
 **On page load**
-<img src=https://user-images.githubusercontent.com/89402596/149624832-2f8d7e72-bc66-409e-a4f0-ba90126de779.png />
+<img src=https://user-images.githubusercontent.com/89402596/149624832-2f8d7e72-bc66-409e-a4f0-ba90126de779.png /> <br>
 **Maze Generation process**:
-<img src=https://user-images.githubusercontent.com/89402596/149624896-caaeb462-45a6-4e0d-8b97-102ffde3f9a4.png />
+<img src=https://user-images.githubusercontent.com/89402596/149624896-caaeb462-45a6-4e0d-8b97-102ffde3f9a4.png /> <br>
 **Higher level**:
-<img src=https://user-images.githubusercontent.com/89402596/149624916-253faf79-e2ef-44f0-a727-b0236b73ef27.png />
+<img src=https://user-images.githubusercontent.com/89402596/149624916-253faf79-e2ef-44f0-a727-b0236b73ef27.png /> <br>
 **End of game screens**:
 <img src=https://user-images.githubusercontent.com/89402596/149624987-43f9640e-604a-4c4a-be0f-8177e03927e2.png />
 <img src=https://user-images.githubusercontent.com/89402596/149625006-f85d5220-6419-4481-8c25-2bdaae42098d.png />
@@ -91,14 +91,14 @@ Once I had ticked the boxes from step 2 there were other features I wanted to in
 -- Basing the size of the coins on the size of cells (which changes depending on the number of rows and columns on the level being played) and keeping the coins centred within the cells.
 
 ## Possible future improvements:
-Add a replay button and sound effects, randomise coin placement.
-Include local storage to store high-score
-Introduce difficulty settings (reduce time limit)
-Make code ‘DRY’ & make design responsive (screen-size compatibility & maybe even touch screen). 
+Add a replay button and sound effects, randomise coin placement. <br>
+Include local storage to store high-score <br>
+Introduce difficulty settings (reduce time limit) <br>
+Make code ‘DRY’ & make design responsive (screen-size compatibility & maybe even touch screen). <br>
 Translate into React.js - I’m certain this would present interesting challenges - (the maze generation in particular) 
 
 ## Bugs
-If time runs out part way through the maze generation process of the second or third level, the process continues but the game over screen is displayed too - the game is not ended properly.
-    I had to find work-arounds which were suboptimal in my opinion.  E.g. The value cells on each level are in fixed positions - when I randomised it, I broke the maze-generation and never discovered why. 
+If time runs out part way through the maze generation process of the second or third level, the process continues but the game over screen is displayed too - the game is not ended properly. <br>
+I had to find work-arounds which were suboptimal in my opinion.  E.g. The value cells on each level are in fixed positions - when I randomised it, I broke the maze-generation and never discovered why. 
 
 
