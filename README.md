@@ -48,15 +48,15 @@ The depth first search implementation only creates one single route through each
 I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
 The process would have to be different for each level (the maze should get more complex)
 
-To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’ would be added into some cells.
-There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size of the coins would have to be derived from the size of the cells containing them.
+To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’ would be added into some cells. <br>
+There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size of the coins would have to be derived from the size of the cells containing them. <br>
 * *again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way through the process.* *
 
 There should be a time element so that a player loses the game if they fail to complete all of the levels.
 
 ### End - polishing & testing :
-Once I had ticked the boxes from step 2 there were other features I wanted to include;
-1. Sound - I succeeded in doing this before my presentation but failed to get that version pushed to GitHub in time. 
+Once I had ticked the boxes from step 2 there were other features I wanted to include; <br>
+1. Sound - I succeeded in doing this before my presentation but failed to get that version pushed to GitHub in time.
 2. Animated time bar to show the user how much they had left. 
 3. Display results. 
 4. Write some CSS that would make the whole thing look nicer. 
