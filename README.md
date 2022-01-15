@@ -1,10 +1,8 @@
 # General Assembly - Project 1
-# squareBrain() :robot:
-
+# [squareBrain()](arthur-ruxton.github.io/Maze-Game) :robot:
 A maze game with three levels of complexity, which includes unique maze generation - achieved using an implementation / manipulation of the depth first search algorithm.
 
-The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
-
+### Timeframe: 1 week
 <details>
   <summary>Goals</summary>
   1. build a grid-based game using HTML, CSS and JavaScript. <br>
@@ -14,24 +12,12 @@ The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
 </details>
 
 <details>
- <summary>squareBrain() - Overview.</summary>
-  <ul>
-    <li>
-      Press start and an animated, somewhat randomized, <em>maze-generation</em> will begin, triggering a timer. Closely observing the <em>animated path-finder algorithm</em> may help you solve the puzzle. 
-    </li>
-    <li>
-      squareBrain() has <em>three levels of complexity.</em> Navigate through all three mazes to complete the game.
-    </li>
-    <li>
-      <em>Collect golden nugs</em> to increase your score as you go, they’re rarer and more valuable on harder levels.
-    </li>
-    <li>
-      <em>If time runs out</em>, it’s game over. 
-    </li>
-    <li>
-      There are 'specialCells'. The program removes all walls of any specialCell as well as any wall touching it. This is done to ensure <em>multiple potential</em> routes, through each maze. 
-    </li>
-  </ul>
+ <summary>Overview.</summary>
+ Press start and an animated, randomised, maze-generation will begin, triggering a timer. If time runs out, it’s game over. <br>
+ Closely observing the animated path-finder algorithm may help you solve the puzzle. <br>
+ squareBrain() has three levels of complexity. Navigate through all three mazes to complete the game. <br>
+ Collect golden nugs to increase your score as you go, they’re rarer and more valuable on harder levels. <br>
+ There are 'specialCells'. The program removes all walls of any specialCell as well as any wall touching it. This is done to ensure multiple potential routes,     t  through each maze. 
 </details>
 
 <details>
