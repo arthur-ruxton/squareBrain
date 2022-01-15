@@ -100,7 +100,7 @@ A maze game with three levels of complexity, which includes unique maze generati
 </details>
 
 <details>
-  <summary>Code snippets :</summary>
+  <summary>Code snippets</summary>
   <p>Defining special cells - when the maze-drawing process takes place all walls touching these cells are removed - this helps ensure multiple potential routes through each maze:</p>
   <img src="https://user-images.githubusercontent.com/89402596/149627143-a7f87479-ca04-4dea-852f-c27c48e7e0b5.png" />
   
