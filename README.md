@@ -40,18 +40,14 @@ Creates ‘Value cells’ and draws gold nugs into them, **the size of the nug i
 My understanding of CSS grid and HTML Canvas was weak. I knew I wanted to create a maze based game. After some research, the prevailing established system I found for randomly generating mazes was to implement a depth first search algorithm. I watched some videos in which people used different technologies to do so but none of them were relevant to my knowledge of JavaScript and the task at hand -- Eventually I came across a video in which a programmer translates a python3 implementation into a JavaScript implementation - I decided to follow along. It took me until 3am to understand and mimic this implementation correctly.
 
 ### Middle - bulk of the project :
-Afew problems emerged at this point, I had my work cut out: 
-
+Afew problems emerged at this point, I had my work cut out: <br>
 The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the system to remove extra cell walls, without breaking the algorithm. 
-  *This turned out to be difficult, the algorithm (and obviously the animation) ‘broke’ on multiple attempts. I was worried it wouldn’t be possible.*
-
+  *This turned out to be difficult, the algorithm (and obviously the animation) ‘broke’ on multiple attempts. I was worried it wouldn’t be possible.* <br>
 I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
-The process would have to be different for each level (the maze should get more complex)
-
+The process would have to be different for each level (the maze should get more complex)<br>
 To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’ would be added into some cells. <br>
 There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size of the coins would have to be derived from the size of the cells containing them. <br>
-  *again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way through the process.*
-
+  *again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way through the process.* <br>
 There should be a time element so that a player loses the game if they fail to complete all of the levels.
 
 ### End - polishing & testing :
@@ -63,8 +59,7 @@ Once I had ticked the boxes from step 2 there were other features I wanted to in
 
 ## Code snippets
 **Within the depth first search algorithm -  defining ‘special cells’ which have no walls**:
-<img width="924" alt="Screenshot 2022-01-15 at 14 10 24" src="https://user-images.githubusercontent.com/89402596/149624687-61555d46-ce99-4c10-9c3d-24f8e7d541b0.png">
-
+<img width="924" alt="Screenshot 2022-01-15 at 14 10 24" src="https://user-images.githubusercontent.com/89402596/149624687-61555d46-ce99-4c10-9c3d-24f8e7d541b0.png"> 
 **A switch statement which defines the spec for different levels in the game - when ‘levelOne’ is completed, ‘levelTwo’ is generated**:
 <img src="https://user-images.githubusercontent.com/89402596/149624735-d8d06dd8-75b6-45be-883b-8d55dfbdd9ee.png"/>
 
