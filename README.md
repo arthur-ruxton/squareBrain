@@ -43,14 +43,14 @@ My understanding of CSS grid and HTML Canvas was weak. I knew I wanted to create
 Afew problems emerged at this point, I had my work cut out: 
 
 The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the system to remove extra cell walls, without breaking the algorithm. 
-- *This turned out to be difficult, the algorithm (and obviously the animation) ‘broke’ on multiple attempts. I was worried it wouldn’t be possible.*
+  *This turned out to be difficult, the algorithm (and obviously the animation) ‘broke’ on multiple attempts. I was worried it wouldn’t be possible.*
 
 I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
 The process would have to be different for each level (the maze should get more complex)
 
 To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’ would be added into some cells. <br>
 There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size of the coins would have to be derived from the size of the cells containing them. <br>
-- *again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way through the process.*
+  *again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way through the process.*
 
 There should be a time element so that a player loses the game if they fail to complete all of the levels.
 
