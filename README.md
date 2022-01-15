@@ -50,7 +50,7 @@ The process would have to be different for each level (the maze should get more 
 
 To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’ would be added into some cells. <br>
 There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size of the coins would have to be derived from the size of the cells containing them. <br>
-* *again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way through the process.
+*again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way through the process.*
 
 There should be a time element so that a player loses the game if they fail to complete all of the levels.
 
