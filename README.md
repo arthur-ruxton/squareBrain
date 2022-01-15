@@ -21,12 +21,16 @@ Closely observing the **animated path-finder algorithm** may help you solve the 
 There are 'specialCells'. The program removes all walls of any specialCell as well as any wall touching it. This is done to ensure **multiple potential routes, through each maze**. 
 
 ## Tech
+
 ###HTML - 8.1% & CSS - 11.4 %
+
 ###JavaScript - 80.5% :
-    App.js - controls game-play :
-    The **time element** of the game, the spec for **different levels** of complexity, the Keyboard event listeners for **player movement & level completion**, logic for **collecting gold nugs** & **displaying the end-game results** ( which involves clearing the canvas and removing event listeners.)
-    Maze-gen.js - controls maze generation :
-    **Depth-first-search algorithm** implementation / **Animated maze generation (randomised).**
+
+App.js - controls game-play :
+The **time element** of the game, the spec for **different levels** of complexity, the Keyboard event listeners for **player movement & level completion**, logic for **collecting gold nugs** & **displaying the end-game results** ( which involves clearing the canvas and removing event listeners.)
+
+Maze-gen.js - controls maze generation :
+**Depth-first-search algorithm** implementation / **Animated maze generation (randomised).**
 Creates ‘special cells’ and removes all of their walls as it draws the cells - this logic ensures there are **multiple potential routes through each maze**. 
 Creates ‘Value cells’ and draws gold nugs into them, **the size of the nug is based on the size of the cell which is determined by the number of rows and columns in the current grid - this varies depending on the level you are on**.
 ‘Current cell’ - this cell is highlighted which helps to visualise the process of the depth-first search and also **represents the player**. 
