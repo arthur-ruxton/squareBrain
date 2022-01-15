@@ -12,7 +12,7 @@ A maze game with three levels of complexity, which includes unique maze generati
 </details>
 
 <details>
- <summary>Overview.</summary>
+ <summary>Overview</summary>
  Press start and an animated, randomised, maze-generation will begin, triggering a timer. If time runs out, it’s game over. <br>
  Closely observing the animated path-finder algorithm may help you solve the puzzle. <br>
  squareBrain() has three levels of complexity. Navigate through all three mazes to complete the game. <br>
@@ -59,56 +59,44 @@ A maze game with three levels of complexity, which includes unique maze generati
 
 <details>
   <summary>Approach</summary>
-  <ul>
-    <li>
-      <details>
-        <summary>Beginning - planning :</summary>
-        <p>
-          My understanding of CSS grid and HTML Canvas was weak. I knew I wanted to create a maze based game. After some research, the prevailing established                 system I found for randomly generating mazes was to implement a depth first search algorithm. I watched some videos in which people used different                 technologies to do so but none of them were relevant to my knowledge of JavaScript and the task at hand. 
-        </p>
-        <p>
-          Eventually I came across a video in which a programmer translates a python3 implementation into a JavaScript implementation - I decided to follow along.           It took me until 3am to understand and write this implementation correctly.
-        </p>
-      </details>
-    </li>
-    <li>
-      <details>
-        <summary>Middle - bulk of the project :</summary>
-        <p>Afew problems emerged at this point, I had my work cut out:</p>
-        <ul>
-          <li>
-            The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the                 system to remove extra cell walls - without breaking the algorithm. <em>This turned out to be difficult, the algorithm (and obviously the animation)               broke on multiple attempts. I was worried it wouldn’t be possible.</em>
-            <img src=https://user-images.githubusercontent.com/89402596/149155026-a620a5c4-c875-4d56-b45b-87035bf49d5a.png />
-          </li>
-          <li>
-            I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
-            The process would have to be different for each level (the maze should get more complex)
-            <img src=https://user-images.githubusercontent.com/89402596/149156197-c8cd614f-3212-49e6-881c-7f64215d3b27.png />
-          </li>
-          <li>
-            To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’               would be added into some cells.
-            There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size             of the coins would have to be derived from the size of the cells containing them.
-            <em>again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way                 through the process</em>
-          </li>
-          <li>
-            There should be a time element so that a player loses the game if they fail to complete all of the levels.
-          </li>
-        </ul> 
-      </details>
-    </li>
-    <li>
-      <details>
-        <summary>End - polishing & testing :</summary>
-        <p>Once I had ticked the boxes from step 2 there were other features I wanted to include;</p>
-        <ul>
-          <li>Sound - I succeeded in doing this before my presentation but failed to get that version pushed to github in time.</li>
-          <li>Animated time bar to show the user how much they had left.</li>
-          <li>Display results.</li>
-          <li>Write some css that would make the whole thing look nicer.</li>
-        </ul>
-      </details>
-    </li>
-  </ul> 
+  <div>
+    <h3>Beginning - planning :</h3>
+    <p>
+      My understanding of CSS grid and HTML Canvas was weak. I knew I wanted to create a maze based game. After some research, the prevailing established                 system I found for randomly generating mazes was to implement a depth first search algorithm. I watched some videos in which people used different                 technologies to do so but none of them were relevant to my knowledge of JavaScript and the task at hand. 
+    </p>
+    <p>
+      Eventually I came across a video in which a programmer translates a python3 implementation into a JavaScript implementation - I decided to follow along.           It took me until 3am to understand and write this implementation correctly.
+    </p>
+  </div>
+  <div>
+    <h3>Middle - bulk of the project :</h3>
+      <p>Afew problems emerged at this point, I had my work cut out:</p>
+      <p>
+        The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the                 system to remove extra cell walls - without breaking the algorithm. <em>This turned out to be difficult, the algorithm (and obviously the animation)                 broke on multiple attempts. I was worried it wouldn’t be possible.</em>
+        <img src=https://user-images.githubusercontent.com/89402596/149155026-a620a5c4-c875-4d56-b45b-87035bf49d5a.png />
+      </p>
+      <p>
+        I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
+        The process would have to be different for each level (the maze should get more complex)
+        <img src=https://user-images.githubusercontent.com/89402596/149156197-c8cd614f-3212-49e6-881c-7f64215d3b27.png />
+      </p>
+      <p>
+        To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’                 would be added into some cells.
+        There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size               of the coins would have to be derived from the size of the cells containing them.
+        <em>again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way                   through the process</em>
+      </p>
+      <p>
+        There should be a time element so that a player loses the game if they fail to complete all of the levels.
+      </p>
+  </div>
+  <div>
+    <h3>End - polishing & testing :</h3>
+      <p>Once I had ticked the boxes from step 2 there were other features I wanted to include;</p>
+      <p>Sound - I succeeded in doing this before my presentation but failed to get that version pushed to github in time.</p>
+      <p>Animated time bar to show the user how much they had left.</p>
+      <p>Display results.</p>
+      <p>Write some css that would make the whole thing look nicer.</p>
+  </div>
 </details>
 
 <details>
