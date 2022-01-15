@@ -6,14 +6,11 @@ A maze game with three levels of complexity, which includes unique maze generati
 The live site: [squareBrain](arthur-ruxton.github.io/Maze-Game)
 
 <details>
-  <summary>Aim</summary>
-  <ul>
-    <li>In one week, build a grid-based game using HTML, CSS and JavaScript.</li>
-    <li>Use CSS grid or for an added creative challenge, use HTML Canvas.</li>
-    <li>It can be a direct clone of, or inspired by, an existing game.</li>
-    <li>The game should include logic for losing and winning.</li>
-    <li>The game result should be displayed.</li>
-  </ul>
+  <summary>Goals</summary>
+  1. build a grid-based game using HTML, CSS and JavaScript.
+  2. Use CSS grid or for an added creative challenge, use HTML Canvas. 
+  3. It can be a direct clone of, or inspired by, an existing game. 
+  4. You should be able to win or lose and results should be displayed at the end.
 </details>
 
 <details>
