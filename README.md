@@ -72,7 +72,7 @@ A maze game with three levels of complexity, which includes unique maze generati
     <h3>Middle - bulk of the project :</h3>
       <p>Afew problems emerged at this point, I had my work cut out:</p>
       <p>
-        The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the                 system to remove extra cell walls - without breaking the algorithm. <em>This turned out to be difficult, the algorithm (and obviously the animation)                 broke on multiple attempts. I was worried it wouldn’t be possible.</em>
+        The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the                 system to remove extra cell walls - without breaking the algorithm. <em>This turned out to be difficult, the algorithm (and obviously the animation)                 broke on multiple attempts. I was worried it wouldn’t be possible but I got it working eventually</em>
         <img src=https://user-images.githubusercontent.com/89402596/149155026-a620a5c4-c875-4d56-b45b-87035bf49d5a.png />
       </p>
       <p>
@@ -97,6 +97,18 @@ A maze game with three levels of complexity, which includes unique maze generati
       <p>Display results.</p>
       <p>Write some css that would make the whole thing look nicer.</p>
   </div>
+</details>
+
+<details>
+  <summary>Code snippets :</summary>
+  <p>Defining special cells - when the maze-drawing process takes place all walls touching these cells are removed - this helps ensure multiple potential routes through each maze:</p>
+  <img src="https://user-images.githubusercontent.com/89402596/149627143-a7f87479-ca04-4dea-852f-c27c48e7e0b5.png" />
+  
+  <p>A switch statement which defines the spec for different levels in the game - when ‘levelOne’ is completed, ‘levelTwo’ is generated. :</p>
+  <img  src="https://user-images.githubusercontent.com/89402596/149627240-6e0a48bc-d809-4845-93b3-eafd7afd01c7.png" />
+  
+  <p>Beginning of the function which controlls player movement using keydown listeners - here you can see the up arrow listener which checks if it is possible to move upwards from the current cell - if it is possible then the current cell changes to the cell directly above:</p>
+  <img src="https://user-images.githubusercontent.com/89402596/149627415-1ba060cf-57ca-4492-8816-1f0a1afe78e0.png" />
 </details>
 
 <details>
