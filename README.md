@@ -85,7 +85,7 @@ A maze game with three levels of complexity, which includes unique maze generati
         There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size               of the coins would have to be derived from the size of the cells containing them.
         <em>again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way                   through the process</em>
       </p>
-      <img src=https://user-images.githubusercontent.com/89402596/149156197-c8cd614f-3212-49e6-881c-7f64215d3b27.png />
+      <img src="https://user-images.githubusercontent.com/89402596/149627143-a7f87479-ca04-4dea-852f-c27c48e7e0b5.png" />
   </div>
   <div>
     <h4>Player movement & Game Levels:</h4>
@@ -120,11 +120,13 @@ A maze game with three levels of complexity, which includes unique maze generati
 
 <details>
   <summary>Code snippets</summary>
-  <p>Defining special cells - when the maze-drawing process takes place all walls touching these cells are removed - this helps ensure multiple potential routes through each maze:</p>
-  <img src="https://user-images.githubusercontent.com/89402596/149627143-a7f87479-ca04-4dea-852f-c27c48e7e0b5.png" />
+ 
   
   <p>Beginning of the function which controlls player movement using keydown listeners - here you can see the up arrow listener which checks if it is possible to move upwards from the current cell - if it is possible then the current cell changes to the cell directly above:</p>
   <img src="https://user-images.githubusercontent.com/89402596/149627415-1ba060cf-57ca-4492-8816-1f0a1afe78e0.png" />
+  
+  level generation logic 
+<img src=https://user-images.githubusercontent.com/89402596/149156197-c8cd614f-3212-49e6-881c-7f64215d3b27.png />
 </details>
 
 <details>
