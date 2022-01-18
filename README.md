@@ -62,26 +62,28 @@ A maze game with three levels of complexity, which includes unique maze generati
   <div>
     <h3>Beginning - planning :</h3>
     <p>
-      My understanding of CSS grid and HTML Canvas was weak. I knew I wanted to create a maze based game. After some research, the prevailing established                 system I found for randomly generating mazes was to implement a depth first search algorithm. I watched some videos in which people used different                 technologies to do so but none of them were relevant to my knowledge of JavaScript and the task at hand. 
-    </p>
-    <p>
-      Eventually I came across a video in which a programmer translates a python3 implementation into a JavaScript implementation - I decided to follow along.           It took me until 3am to understand and write this implementation correctly.
+      From the get go I challenged myself to use HTML Canvas and JavaScript to generate a labyrinth based game. I broke down the plan into three main steps 1. maze       generation, 2. player movement & game-levels, 3. logic for scores, winning & losing. I aimed to spend roughly a third of the available time on each step,           allowing at least some time to style the project a bit at the end. 
     </p>
   </div>
   <div>
-    <h3>Middle - bulk of the project :</h3>
-      <p>Afew problems emerged at this point, I had my work cut out:</p>
+    <h3>Building features :</h3>
+    <h4>Maze generation:</h4>
       <p>
-        The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the                 system to remove extra cell walls - without breaking the algorithm. <em>This turned out to be difficult, the algorithm (and obviously the animation)                 broke on multiple attempts. I was worried it wouldn’t be possible but I got it working eventually</em>
+        On the first night of the project, I stayed up until 3 am focussing on maze-generation processes in coding. It became clear that a depth first search               algorithm was an appropriate system. I took some time to understand what this algorithm was before finding a guide on implementing it in JavaScript. 
+        A few challenges emerged at this point, I had my work cut out:
+      </p>
+      <p>
+        1. The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the                 system to remove extra cell walls - without breaking the algorithm. <em>This turned out to be difficult, the algorithm (and obviously the animation)                 ‘broke’ on multiple attempts. I was worried it wouldn’t be possible.</em> <br>
+          Eventually, by defining ‘special cells’ and altering the algorithms instructions for drawing the maze onto the canvas, I was able to remove all walls of             some cells to create multiple routes through any maze generated. 
         <img src=https://user-images.githubusercontent.com/89402596/149155026-a620a5c4-c875-4d56-b45b-87035bf49d5a.png />
       </p>
       <p>
-        I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
+        2. I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
         The process would have to be different for each level (the maze should get more complex)
         <img src=https://user-images.githubusercontent.com/89402596/149156197-c8cd614f-3212-49e6-881c-7f64215d3b27.png />
       </p>
       <p>
-        To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’                 would be added into some cells.
+        3. To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’                 would be added into some cells.
         There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size               of the coins would have to be derived from the size of the cells containing them.
         <em>again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way                   through the process</em>
       </p>
