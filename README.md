@@ -1,4 +1,4 @@
-# General Assembly - Project 1
+# General Assembly Software Engineering Immersive - Project 1
 # [squareBrain()](arthur-ruxton.github.io/Maze-Game) :robot:
 A maze game with three levels of complexity, which includes unique maze generation - achieved using an implementation / manipulation of the depth first search algorithm.
 
