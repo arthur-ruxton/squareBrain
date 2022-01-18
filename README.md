@@ -88,13 +88,33 @@ A maze game with three levels of complexity, which includes unique maze generati
       <img src=https://user-images.githubusercontent.com/89402596/149156197-c8cd614f-3212-49e6-881c-7f64215d3b27.png />
   </div>
   <div>
-    <h3>Player movement & Game Levels:</h3>
+    <h4>Player movement & Game Levels:</h4>
     <p>
       This feature relies on keydown event-listeners and a switch statement that checks available movement options - for example if the ‘current cell’ has a right         wall set to ‘true’ and a bottom wall set to ‘false’, the player can move down into the neighbouring cell but cannot move right. This logic was actually             available as an extension to the depth first search implementation guide I found which was incredibly useful. <br>
       A keydown event listener and a callback function allows a user to generate the next level when they complete one. The parameters of each level are defined in       a switch statement. 
     </p>
     <p>A switch statement which defines the spec for different levels in the game - when ‘levelOne’ is completed, ‘levelTwo’ is generated. :</p>
     <img  src="https://user-images.githubusercontent.com/89402596/149627240-6e0a48bc-d809-4845-93b3-eafd7afd01c7.png" />
+  </div>
+  <div>
+    <h4>Scores, winning & losing :</h4>
+    <p>
+      A function checks if the current cell is a value cell, if it is one, a callback function is executed which increases the total score using a number parameter,       the argument's value depends on the current level.
+    </p>
+    <p>
+      I then set up a setTimeOut function which is triggered when the game begins, this function does a couple of things;
+      <ul>
+        <li>
+          If less than 30% of the available time remains, it changes the time-bar-display colour from green to red as a visual indication that time is running out.
+        </li>
+         <li>
+           If time runs out, it clears the canvas and displays the game-over screen and the players score.
+        </li>
+      </ul>
+    </p>
+    <p>
+      If the player completes all three levels before the time-bar-display is empty, the game-complete screen is shown, along with the player’s score.
+  </p>
   </div>
 </details>
 
