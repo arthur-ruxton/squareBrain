@@ -75,50 +75,26 @@ A maze game with three levels of complexity, which includes unique maze generati
       <p>
         1. The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the                 system to remove extra cell walls - without breaking the algorithm. <em>This turned out to be difficult, the algorithm (and obviously the animation)                 ‘broke’ on multiple attempts. I was worried it wouldn’t be possible.</em> <br>
           Eventually, by defining ‘special cells’ and altering the algorithms instructions for drawing the maze onto the canvas, I was able to remove all walls of             some cells to create multiple routes through any maze generated. 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      </p>
+       </p>
       <p>
         2. I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
         The process would have to be different for each level (the maze should get more complex)
-        <img src=https://user-images.githubusercontent.com/89402596/149156197-c8cd614f-3212-49e6-881c-7f64215d3b27.png />
       </p>
       <p>
-        3. To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’                 would be added into some cells.
+        3. To have a points system - I would have to introduce value cells into the algorithm so that as the maze was being drawn onto the canvas, ‘gold coins’             would be added into some cells. <br>
         There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size               of the coins would have to be derived from the size of the cells containing them.
         <em>again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way                   through the process</em>
       </p>
-      <p>
-        There should be a time element so that a player loses the game if they fail to complete all of the levels.
-      </p>
+      <img src=https://user-images.githubusercontent.com/89402596/149156197-c8cd614f-3212-49e6-881c-7f64215d3b27.png />
   </div>
   <div>
-    <h3>End - polishing & testing :</h3>
-      <p>Once I had ticked the boxes from step 2 there were other features I wanted to include;</p>
-      <p>Sound - I succeeded in doing this before my presentation but failed to get that version pushed to github in time.</p>
-      <p>Animated time bar to show the user how much they had left.</p>
-      <p>Display results.</p>
-      <p>Write some css that would make the whole thing look nicer.</p>
+    <h3>Player movement & Game Levels:</h3>
+    <p>
+      This feature relies on keydown event-listeners and a switch statement that checks available movement options - for example if the ‘current cell’ has a right         wall set to ‘true’ and a bottom wall set to ‘false’, the player can move down into the neighbouring cell but cannot move right. This logic was actually             available as an extension to the depth first search implementation guide I found which was incredibly useful. <br>
+      A keydown event listener and a callback function allows a user to generate the next level when they complete one. The parameters of each level are defined in       a switch statement. 
+    </p>
+    <p>A switch statement which defines the spec for different levels in the game - when ‘levelOne’ is completed, ‘levelTwo’ is generated. :</p>
+    <img  src="https://user-images.githubusercontent.com/89402596/149627240-6e0a48bc-d809-4845-93b3-eafd7afd01c7.png" />
   </div>
 </details>
 
@@ -126,9 +102,6 @@ A maze game with three levels of complexity, which includes unique maze generati
   <summary>Code snippets</summary>
   <p>Defining special cells - when the maze-drawing process takes place all walls touching these cells are removed - this helps ensure multiple potential routes through each maze:</p>
   <img src="https://user-images.githubusercontent.com/89402596/149627143-a7f87479-ca04-4dea-852f-c27c48e7e0b5.png" />
-  
-  <p>A switch statement which defines the spec for different levels in the game - when ‘levelOne’ is completed, ‘levelTwo’ is generated. :</p>
-  <img  src="https://user-images.githubusercontent.com/89402596/149627240-6e0a48bc-d809-4845-93b3-eafd7afd01c7.png" />
   
   <p>Beginning of the function which controlls player movement using keydown listeners - here you can see the up arrow listener which checks if it is possible to move upwards from the current cell - if it is possible then the current cell changes to the cell directly above:</p>
   <img src="https://user-images.githubusercontent.com/89402596/149627415-1ba060cf-57ca-4492-8816-1f0a1afe78e0.png" />
