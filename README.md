@@ -120,17 +120,6 @@ A maze game with three levels of complexity, which includes unique maze generati
 </details>
 
 <details>
-  <summary>Code snippets</summary>
- 
-  
-  <p>Beginning of the function which controlls player movement using keydown listeners - here you can see the up arrow listener which checks if it is possible to move upwards from the current cell - if it is possible then the current cell changes to the cell directly above:</p>
-  <img src="https://user-images.githubusercontent.com/89402596/149627415-1ba060cf-57ca-4492-8816-1f0a1afe78e0.png" />
-  
-  level generation logic 
-<img src=https://user-images.githubusercontent.com/89402596/149156197-c8cd614f-3212-49e6-881c-7f64215d3b27.png />
-</details>
-
-<details>
   <summary>Visuals</summary>
   <p>On page load:</p>
   <img src=https://user-images.githubusercontent.com/89402596/148796281-52e9e273-9dd9-4505-b7b9-66143d8ec623.png />
@@ -150,17 +139,14 @@ A maze game with three levels of complexity, which includes unique maze generati
 
 <details>
   <summary>Key learnings :open_book:</summary>
-  <ul>
-    <li>
-      Identify a relevant existing system for accomplishing a complex task - study it as you implement it - achieve a different goal by creatively adapting the           system.
-    </li>
-    <li>Depth first search algorithm.</li>
-    <li>Event Listeners.</li>
-    <li>Timeouts.</li>
-    <li>HTML Canvas.</li>
-    <li>Flexbox</li>
-    <li>General planning techniques for code based projects</li>
-  </ul>
+  <p>
+    Identified a relevant existing system for accomplishing a complex task - studied it while implementing it  - achieved a different goal by creatively adapting       the system. On this project it was the depth first search algorithm. <br>
+    Using event Listeners to trigger logic conditionally. <br>
+    Timeouts. <br>
+    HTML Canvas. <br>
+    Flexbox, highly useful and versatile. <br>
+    General planning techniques for code based projects.
+  </p>
 </details>
 
 <details>
@@ -184,27 +170,20 @@ A maze game with three levels of complexity, which includes unique maze generati
 
 <details>
   <summary>Possible future improvements</summary>
-  <ul>
-    <li>Make code ‘DRY’</li>
-    <li>Replay button</li>
-    <li>Randomise coin placement</li>
-    <li>Sound effects</li>
-    <li>Responsive design (screen-size compatibility & maybe even touch screen)</li>
-    <li>Local storage to store high-score</li>
-    <li>Difficulty settings (reduce time limit)</li>
-    <li>Translate into React.js - I’m certain this would present interesting challenges - (the maze generation in particular)</li>
-  </ul>
+  <p>
+    Add a replay button and sound effects, randomise coin placement. <br>
+    Include local storage to store high-score. <br>
+    Introduce difficulty settings (reduce time limit). <br>
+    Make code ‘DRY’ & make design responsive (screen-size compatibility & maybe even touch screen). <br>
+    Translate into React.js - I’m certain this would present interesting challenges - (the maze generation in particular) 
+  </p>
 </details>
 
 <details>
   <summary>Bugs</summary>
   <p>
     If time runs out part way through the maze generation process of the second or third level, the process continues but the game over screen is displayed too -       the game is not ended properly.
-  </p>
-  <p>
      I had to find work-arounds which were suboptimal in my opinion.  E.g. The value cells on each level are in fixed positions - when I randomised it, I broke the      maze-generation and never discovered why.
-  </p>
-  <p>
     You have to move through the square-brain maze collecting tokens (which are worth more on higher levels) - if you reach the finish line and press enter, a maze     of greater complexity will be generated. You have a time limit to complete three levels, if time runs out, you lose. There are always multiple routes through       every maze, which was a difficult effect to create but I did accomplish that in time for my presentation. 
   </p>
 </details>
