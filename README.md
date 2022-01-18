@@ -85,6 +85,7 @@ A maze game with three levels of complexity, which includes unique maze generati
         There would have to be more value cells on levels with more rows and columns. Cells would be smaller on levels with more rows and columns, so the size               of the coins would have to be derived from the size of the cells containing them.
         <em>again this was much harder than expected, some of my attempts broke the algorithm and the animation of the maze-generation would stop half way                   through the process</em>
       </p>
+      <p>Here's a code snippet in which I define 'special cells' - their walls are later removed in order to introduce multiple routes through mazes</p>
       <img src="https://user-images.githubusercontent.com/89402596/149627143-a7f87479-ca04-4dea-852f-c27c48e7e0b5.png" />
   </div>
   <div>
