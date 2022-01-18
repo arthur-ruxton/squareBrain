@@ -13,11 +13,11 @@ A maze game with three levels of complexity, which includes unique maze generati
 
 <details>
  <summary>Overview :bulb:</summary>
- Press start and an animated, randomised, maze-generation will begin, triggering a timer. If time runs out, it’s game over. <br>
- Closely observing the animated path-finder algorithm may help you solve the puzzle. <br>
- squareBrain() has three levels of complexity. Navigate through all three mazes to complete the game. <br>
- Collect golden nugs to increase your score as you go, they’re rarer and more valuable on harder levels. <br>
- There are 'specialCells'. The program removes all walls of any specialCell as well as any wall touching it. This is done to ensure multiple potential routes,     t  through each maze. 
+  A labyrinth game with three levels of complexity, navigate through all three mazes to complete the game.
+  <b>Collect golden nugs</b> to increase your score as you go, they’re rarer and more valuable on harder levels.
+  Press start and an animated, randomised, <b>maze-generation</b> will begin, triggering a timer. <b>If time runs out</b>, it’s game over. 
+  Closely observing the <b>animated path-finder algorithm</b> may help you solve the puzzle. 
+  There are 'specialCells'. The program removes all walls of any specialCell as well as any wall touching it. This is done to ensure <b>multiple potential             routes</b> through each maze. 
 </details>
 
 <details>
