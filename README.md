@@ -75,7 +75,28 @@ A maze game with three levels of complexity, which includes unique maze generati
       <p>
         1. The depth first search implementation only creates one single route through each maze. To make game play more interesting I would have to alter the                 system to remove extra cell walls - without breaking the algorithm. <em>This turned out to be difficult, the algorithm (and obviously the animation)                 ‘broke’ on multiple attempts. I was worried it wouldn’t be possible.</em> <br>
           Eventually, by defining ‘special cells’ and altering the algorithms instructions for drawing the maze onto the canvas, I was able to remove all walls of             some cells to create multiple routes through any maze generated. 
-        <img src=https://user-images.githubusercontent.com/89402596/149155026-a620a5c4-c875-4d56-b45b-87035bf49d5a.png />
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
       </p>
       <p>
         2. I wanted three levels of complexity to the game - so I would have to re-trigger the process at a given moment (completion of a level) 
